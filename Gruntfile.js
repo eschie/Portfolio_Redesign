@@ -24,14 +24,17 @@ module.exports = function(grunt) {
             html: ['views/*.hbs', 'views/**/*.hbs']
         },
         assets: grunt.file.readJSON('app/config/assets-faf.json'),
-        clean: ['bower_components/build/*','<%= project.dist %>/css/min/*', '<%= project.dist %>/js/min/*'],
+        clean: {
+            css: ['bower_components/build/*','<%= project.dist %>/css/min/*','<%= project.src %>/css/*'],
+            js: ['<%= project.dist %>/js/min/*']
+        },
         sass: {
             dist: {
                 options: {
                     style: 'expanded'
                 },
                 files: {
-                    '<%= project.css %>' : [ '<%= project.scss %>', '<%= project.src %>/sass/**/*.scss' ]
+                    'app/assets/src/css/main.css': 'app/assets/src/sass/main.scss'
                 }
             }
         },
@@ -67,8 +70,8 @@ module.exports = function(grunt) {
               }
             },
             sass: {
-                files: '<%= project.sass %>',
-                tasks: ['sass']
+                files: ['app/assets/src/sass/main.scss', 'app/assets/src/sass/partials/*.scss'],
+                tasks: ['clean:css','sass','cssmin']
             },
             css: {
               files: '<%= project.css %>',
@@ -76,7 +79,7 @@ module.exports = function(grunt) {
               options: {
                 livereload: true
               }
-            },
+            }
         },
         csslint: {
           options: {
