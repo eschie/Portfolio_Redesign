@@ -4,47 +4,60 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, menu, nav, section {
   display: block;
-  color: red; }
+  color: red;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote, q {
-  quotes: none; }
-  blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none; }
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 .clear {
-  clear: both; }
+  clear: both;
+}
 
 body {
   background-color: #cbc7e8;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIwJSIgY3k9IjAlIiByPSIxNDEuNDIxMzU2MjM3MzA5NSUiPjxzdG9wIHN0b3AtY29sb3I9IiM4YmU1ZWIiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2U5YmFmOSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNjciLz48c3RvcCBzdG9wLWNvbG9yPSIjZjFiMGIwIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMSIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==);
-  background-image: -webkit-repeating-radial-gradient(ellipse farthest-corner at left top, #8be5eb 0, #e9baf9 67%, #f1b0b0 100%);
-  background-image: repeating-radial-gradient(ellipse farthest-corner at left top, #8be5eb 0, #e9baf9 67%, #f1b0b0 100%); }
+  background-image: repeating-radial-gradient(ellipse farthest-corner at left top, #8be5eb 0, #e9baf9 67%, #f1b0b0 100%);
+}
 
 .container {
-  width: 100%; }
+  width: 100%;
+}
 
 .sidebar {
   width: 8.3%;
   height: 100%;
   background-color: #c83636;
   background-color: rgba(0, 0, 0, 0.7);
-  display: block; }
+  display: block;
+}
+
+/*# sourceMappingURL=main.css.map */
