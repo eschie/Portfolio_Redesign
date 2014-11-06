@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Test Index</title>
+{{#each assets.main.css}}
+    <link rel="stylesheet" href="{{this}}">
+{{/each}}
+
+{{#each assets.main.js}}
+    <script type="text/javascript" src="{{this}}"></script>
+{{/each}}
+</head>
+<body>
+
+{{{body}}}
+
+</body>
+</html>

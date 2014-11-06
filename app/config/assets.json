@@ -1,0 +1,20 @@
+{
+  "main": {
+    "css": {
+        "app/assets/dist/main.min.css": [
+            "app/assets/src/css/main.css"
+        ]
+    },
+    "js": {
+        "app/assets/dist/js/min/lib.min.js": [
+            "bower_components/jquery/dist/jquery.min.js",
+            "bower_components/angular/angular.min.js",
+            "bower_components/angular-mocks/angular-mocks.js",
+            "bower_components/angular-cookies/angular-cookies.min.js",
+            "bower_components/angular-resource/angular-resource.min.js",
+            "bower_components/angular-ui-router/release/angular-ui-router.min.js",
+            "app/assets/src/js/*.js"
+        ]
+    }
+  }
+}
