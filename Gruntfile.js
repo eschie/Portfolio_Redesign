@@ -44,16 +44,6 @@ module.exports = function(grunt) {
                 dest: '<%= project.css %>'
             }
         },
-        // express: {
-        //     all: {
-        //         options: {
-        //             port: 8000,
-        //             hostname: '0.0.0.0',
-        //             bases: ['<%= project.root %>'],
-        //             livereload: true
-        //         }
-        //     }
-        // },
         watch: {
             js: {
               files: '<%= project.js %>',
@@ -63,7 +53,8 @@ module.exports = function(grunt) {
               }
             },
             handlebars: {
-              files: '<%= project.html %>',
+              files: ['views/*.hbs','views/**/*.hbs']
+              tasks: ['csslint'],
               options: {
                 livereload: true,
                 interval: 500

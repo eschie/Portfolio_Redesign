@@ -40,7 +40,6 @@
     "grunt-autoprefixer": "^1.0.1",
     "grunt-contrib-sass": "latest",
     "grunt-contrib-watch": "latest",
-    "grunt-express-server": "latest",
     "grunt-open": "latest",
     "matchdep": "latest",
     "requirejs": "^2.1.11"

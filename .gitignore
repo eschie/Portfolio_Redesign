@@ -2,6 +2,8 @@
 # Project Files
 # --------------------
 main.css.map
+/app/Design
+*.sketch
 
 # --------------------
 # OSX Files

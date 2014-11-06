@@ -1,6 +1,5 @@
 'use strict';
 
-
 var express = require('express');
 var app = express();
 
@@ -8,13 +7,15 @@ var cookieParser = require('cookie-parser'),
     expressValidator = require('express-validator'),
     bodyParser = require('body-parser'),
     session = require('express-session'),
-    assetmanager = require('assetmanager');
-var expressHbs = require('express-handlebars');
+    assetmanager = require('assetmanager'),
+    expressHbs = require('express-handlebars');
 
 app.set('title','Eschie.info');
 app.set('showStackError', true);
+
 app.engine('hbs', expressHbs({extname:'hbs', defaultLayout:'main.hbs'}));
 app.set('view engine', 'hbs');
+
 app.locals.pretty = true;
 app.locals.cache = 'memory';
 app.use(cookieParser());
@@ -40,9 +41,8 @@ app.use(function(req, res, next) {
     next();
 });
 
-
-
-app.get('/', require("./app/controllers/index"));
+var routes = require('./routes/routes');
+routes(app);
 
 app.set('port', process.env.PORT || 8000);
 var server = app.listen(app.get('port'), function() {
