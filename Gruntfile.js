@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     // // Load Grunt tasks declared in the package.json file
     // require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-    // require('load-grunt-tasks')(grunt);
+    require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt, {pattern: ['grunt-contrib-*', 'grunt-*']});
 
     // Configure Grunt
@@ -44,6 +44,26 @@ module.exports = function(grunt) {
                 dest: '<%= project.css %>'
             }
         },
+        //  handlebars: {
+        //     app: {
+        //         options: {
+        //             namespace: false,
+        //             amd: true,
+        //             processContent: function(content) {
+        //                 content = content.replace(/^[\x20\t]+/mg, '').replace(/[\x20\t]+$/mg, '');
+        //                 content = content.replace(/^[\r\n]+/, '').replace(/[\r\n]*$/, '\n');
+        //                 return content;
+        //             }
+        //         },
+        //         files: [{
+        //             expand: true,
+        //             cwd: 'views/',
+        //             src: ['*.hbs','**/*.hbs'],
+        //             dest: '.tmp/scripts/app/templates/',
+        //             ext: '.js',
+        //         }],
+        //     },
+        // },
         watch: {
             js: {
               files: '<%= project.js %>',
@@ -53,7 +73,7 @@ module.exports = function(grunt) {
               }
             },
             handlebars: {
-              files: ['views/*.hbs','views/**/*.hbs']
+              files: ['views/*.hbs','views/**/*.hbs'],
               tasks: ['csslint'],
               options: {
                 livereload: true,
