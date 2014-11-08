@@ -13,7 +13,11 @@ var cookieParser = require('cookie-parser'),
 app.set('title','Eschie.info');
 app.set('showStackError', true);
 
-app.engine('hbs', expressHbs({extname:'hbs', defaultLayout:'main.hbs'}));
+app.engine('hbs', expressHbs({
+    extname:'hbs', 
+    defaultLayout:'main.hbs',
+    layoutsDir: 'views/layouts'
+}));
 app.set('view engine', 'hbs');
 
 app.locals.pretty = true;

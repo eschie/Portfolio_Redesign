@@ -74,7 +74,7 @@ module.exports = function(grunt) {
             },
             handlebars: {
               files: ['views/*.hbs','views/**/*.hbs'],
-              tasks: ['csslint'],
+              // tasks: ['nodemon'],
               options: {
                 livereload: true,
                 interval: 500
@@ -159,11 +159,11 @@ module.exports = function(grunt) {
           }
         },
         // grunt-open will open your browser at the project's URL
-        open: {
-            all: {
-                path: 'http://localhost:<%= express.all.options.port%>'
-            }
-        }
+        // open: {
+        //     all: {
+        //         path: 'http://localhost:<%= express.all.options.port%>'
+        //     }
+        // }
     });
 
     //Load NPM tasks

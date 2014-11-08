@@ -1,7 +1,23 @@
 .sidebar{
     width: 8.3%;
     height: 100%;
-    background-color: rgb(200, 54, 54);
+    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.70);
     display: block;
+}
+
+.key{
+    width: 100%;
+    height: 2%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.30);
+
+    p {
+        height: 100%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        text-align: center;
+        font-size: 20%;
+        display: block;
+    }
 }
