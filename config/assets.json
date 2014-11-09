@@ -13,7 +13,7 @@
             "bower_components/angular-cookies/angular-cookies.min.js",
             "bower_components/angular-resource/angular-resource.min.js",
             "bower_components/angular-ui-router/release/angular-ui-router.min.js",
-            "app/assets/src/js/*.js"
+            "bower_components/handlebars/handlebars.runtime.js"
         ]
     }
   }

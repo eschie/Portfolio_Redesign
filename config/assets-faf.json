@@ -8,7 +8,8 @@
             "bower_components/angular-mocks/angular-mocks.js",
             "bower_components/angular-cookies/angular-cookies.min.js",
             "bower_components/angular-resource/angular-resource.min.js",
-            "bower_components/angular-ui-router/release/angular-ui-router.min.js"
+            "bower_components/angular-ui-router/release/angular-ui-router.min.js",
+            "bower_components/handlebars.runtime.js"
         ]
     },
     "publicCss": {
@@ -18,7 +19,7 @@
     "publicJs": {
       "dest": "app/assets/dist/js/min/client.min.js",
       "src": [
-        "app/assets/src/js/*.js"
+        "app/assets/src/js/**/*.js"
       ]
     }
   }

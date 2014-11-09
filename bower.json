@@ -9,6 +9,7 @@
     "angular-mocks": "latest",
     "angular-route": "latest",
     "angular-ui-router": "#master",
-    "normalize.scss": "~3.0.1+normalize.3.0.1"
+    "normalize.scss": "~3.0.1+normalize.3.0.1",
+    "handlebars": "latest"
   }
 }

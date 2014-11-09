@@ -15,7 +15,7 @@ module.exports = function(grunt) {
             root: '/Users/eschie/Projects/Sites/Eschie.info/Redesign 2014',
             app: 'app',
             assets: '<%= project.app %>/assets',
-            config: '<%= project.app %>/config',
+            config: 'config',
             src: '<%= project.assets %>/src',
             dist: '<%= project.assets %>/dist',
             css: '<%= project.src %>/css/main.css',
@@ -23,10 +23,10 @@ module.exports = function(grunt) {
             js: '<%= project.src %>/js/*.js',
             html: ['views/*.hbs', 'views/**/*.hbs']
         },
-        assets: grunt.file.readJSON('app/config/assets-faf.json'),
+        assets: grunt.file.readJSON('config/assets-faf.json'),
         clean: {
             css: ['bower_components/build/*','<%= project.dist %>/css/min/*','<%= project.src %>/css/*'],
-            js: ['<%= project.dist %>/js/min/*']
+            js: ['<%= project.dist %>/js/min/*','<%= project.src %>/js/**/*.js']
         },
         sass: {
             dist: {
@@ -45,28 +45,23 @@ module.exports = function(grunt) {
             }
         },
         //  handlebars: {
-        //     app: {
+        //     compile: {
         //         options: {
-        //             namespace: false,
-        //             amd: true,
+        //             namespace: 'App.templates',
         //             processContent: function(content) {
         //                 content = content.replace(/^[\x20\t]+/mg, '').replace(/[\x20\t]+$/mg, '');
         //                 content = content.replace(/^[\r\n]+/, '').replace(/[\r\n]*$/, '\n');
         //                 return content;
         //             }
         //         },
-        //         files: [{
-        //             expand: true,
-        //             cwd: 'views/',
-        //             src: ['*.hbs','**/*.hbs'],
-        //             dest: '.tmp/scripts/app/templates/',
-        //             ext: '.js',
-        //         }],
-        //     },
+        //         files: {
+        //             '<%= project.src %>/js/templates/templates.js': ['views/*.hbs','views/**/*.hbs']
+        //         }
+        //     }
         // },
         watch: {
             js: {
-              files: '<%= project.js %>',
+              files: ['<%= project.js %>','./*.js'],
               // tasks: ['jshint'],
               options: {
                 livereload: true
@@ -74,10 +69,9 @@ module.exports = function(grunt) {
             },
             handlebars: {
               files: ['views/*.hbs','views/**/*.hbs'],
-              // tasks: ['nodemon'],
+              tasks: ['clean:js'],
               options: {
-                livereload: true,
-                interval: 500
+                livereload: true
               }
             },
             sass: {
@@ -98,14 +92,12 @@ module.exports = function(grunt) {
           },
           src: '<%= project.css %>'
         },
-        // jshint: {
-        //   all: {
-        //     src: paths.js,
-        //     options: {
-        //       jshintrc: true
-        //     }
-        //   }
-        // },
+        jshint: {
+            options: {
+              jshintrc: true
+            },
+            files: ['<%= project.src %>/js/*.js','./*.js']
+        },
         // compass: {                  // Task
         //     dist: {                   // Target
         //       options: {              // Target options
@@ -145,9 +137,9 @@ module.exports = function(grunt) {
             options: {
               args: [],
               ignore: ['node_modules/**'],
-              ext: 'js,html',
+              ext: 'js,html,hbs',
               nodeArgs: ['--debug'],
-              delayTime: 1,
+              delay: 2000,
               cwd: '<%= project.root %>'
             }
           }
@@ -175,7 +167,8 @@ module.exports = function(grunt) {
     if (process.env.NODE_ENV === 'production') {
       grunt.registerTask('default', 
         [
-            'clean', 
+            'clean',
+            // 'handlebars:compile', 
             'sass', 
             'autoprefixer',
             'cssmin', 
@@ -185,7 +178,8 @@ module.exports = function(grunt) {
     } else {
       grunt.registerTask('default', 
         [
-            'clean', 
+            'clean',
+            // 'handlebars:compile',
             'sass', 
             'autoprefixer',
             'csslint', 

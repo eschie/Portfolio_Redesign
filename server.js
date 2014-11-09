@@ -35,7 +35,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 var assets = assetmanager.process({
-    assets: require('./app/config/assets.json'),
+    assets: require('./config/assets.json'),
     debug: process.env.NODE_ENV !== 'production',
     webroot: /public\/|packages\//g
 });
