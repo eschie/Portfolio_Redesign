@@ -26,7 +26,7 @@ module.exports = function(grunt) {
         assets: grunt.file.readJSON('config/assets-faf.json'),
         clean: {
             css: ['bower_components/build/*','<%= project.dist %>/css/min/*','<%= project.src %>/css/*'],
-            js: ['<%= project.dist %>/js/min/*','<%= project.src %>/js/**/*.js'],
+            js: ['<%= project.dist %>/js/min/*'],
             svg: ['<%= project.src %>/js/icons.js']
         },
         sass: {

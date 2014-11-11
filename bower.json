@@ -3,13 +3,9 @@
   "version": "1.0.0",
   "dependencies": {
     "jquery": "1.x",
-    "angular": "latest",
-    "angular-resource": "latest",
-    "angular-cookies": "latest",
-    "angular-mocks": "latest",
-    "angular-route": "latest",
-    "angular-ui-router": "#master",
     "normalize.scss": "~3.0.1+normalize.3.0.1",
-    "handlebars": "latest"
+    "handlebars": "latest",
+    "backbone": "latest",
+    "underscore": "latest"
   }
 }
