@@ -26,7 +26,8 @@ module.exports = function(grunt) {
         assets: grunt.file.readJSON('config/assets-faf.json'),
         clean: {
             css: ['bower_components/build/*','<%= project.dist %>/css/min/*','<%= project.src %>/css/*'],
-            js: ['<%= project.dist %>/js/min/*','<%= project.src %>/js/**/*.js']
+            js: ['<%= project.dist %>/js/min/*','<%= project.src %>/js/**/*.js'],
+            svg: ['<%= project.src %>/js/icons.js']
         },
         sass: {
             dist: {
@@ -84,6 +85,52 @@ module.exports = function(grunt) {
               options: {
                 livereload: true
               }
+            },
+            svg:{
+                files: '<%= project.src %>/icons/*.svg',
+                tasks: ['clean:svg','svgstore:icons','svginjector:icons'],
+                options: {
+                    livereload: true
+                }
+            }
+        },
+        svgstore: {
+            icons: {
+                files: {
+                '<%= project.dist %>/img/icons/icons.svg': ['<%= project.src %>/icons/*.svg']
+                },
+                options: {
+
+                /*
+                prefix all icons with an unambiguous label
+                */
+                prefix: 'icon-',
+
+                /* 
+                cleans fill, stroke, stroke-width attributes 
+                so that we can style them from CSS
+                */
+                cleanup: true,
+
+                /*
+                write a custom function to strip the first part
+                of the file that Adobe Illustrator generates 
+                when exporting the artboards to SVG
+                */
+                convertNameToId: function(name) {
+                        return name.replace(/^\w+\_/, '');
+                    }
+                }
+            }
+        },
+        svginjector: {
+            icons: {
+                files: {
+                    '<%= project.dist %>/js/icons.js': ['<%= project.dist %>/img/icons/icons.svg']
+                },
+                options: {
+                    container: 'icon-container'
+                }
             }
         },
         csslint: {
@@ -139,7 +186,7 @@ module.exports = function(grunt) {
               ignore: ['node_modules/**'],
               ext: 'js,html,hbs',
               nodeArgs: ['--debug'],
-              delay: 2000,
+              delay: 1000,
               cwd: '<%= project.root %>'
             }
           }
@@ -168,7 +215,9 @@ module.exports = function(grunt) {
       grunt.registerTask('default', 
         [
             'clean',
-            // 'handlebars:compile', 
+            'svgstore:icons',
+            'svginjector:icons',
+            // 'handlebars:compile',
             'sass', 
             'autoprefixer',
             'cssmin', 
@@ -179,6 +228,8 @@ module.exports = function(grunt) {
       grunt.registerTask('default', 
         [
             'clean',
+            'svgstore:icons',
+            'svginjector:icons',
             // 'handlebars:compile',
             'sass', 
             'autoprefixer',

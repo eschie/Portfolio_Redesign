@@ -41,6 +41,9 @@
     "grunt-contrib-sass": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-open": "latest",
+    "grunt-svginjector": "^0.1.1",
+    "grunt-svgmin": "^1.0.0",
+    "grunt-svgstore": "^0.4.1",
     "matchdep": "latest",
     "requirejs": "^2.1.11"
   }
