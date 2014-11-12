@@ -19,8 +19,13 @@ body {
     color: $font_color_default;
 }
 
-.content-container {
-    width:100%;
-}
 @import "./partials/sidebar";
+
+.content-container {
+    padding-left: 110px;
+    width:auto;
+    height:100%;
+    position: relative;
+    overflow: auto;
+}
 
