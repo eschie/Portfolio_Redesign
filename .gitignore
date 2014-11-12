@@ -1,7 +1,7 @@
 #  --------------------
 # Project Files
 # --------------------
-main.css.map
+*.map
 /app/Design
 *.sketch
 
