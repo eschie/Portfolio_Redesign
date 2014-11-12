@@ -4,6 +4,8 @@
 *.map
 /app/Design
 *.sketch
+.svg
+
 
 # --------------------
 # OSX Files
