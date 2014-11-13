@@ -156,6 +156,14 @@
                 transform: translate(-50%, -50%);
                 width: 33%;
                 height: 33%;
+                -webkit-transition: height .1s ease-out;
+                -moz-transition: height .1s ease-out;
+                -o-transition: height .1s ease-out;
+                transition: height .1s ease-out;
+
+                &:hover{
+                    height:44%;
+                }
             }
             
             // TODO - remove 
