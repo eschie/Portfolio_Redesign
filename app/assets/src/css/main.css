@@ -220,6 +220,11 @@ body {
   fill: white;
 }
 
+.iconstroke {
+  stroke: white;
+  stroke: rgba(255, 255, 255, 0.6);
+}
+
 .content-container {
   margin-left: 110px;
   width: auto;

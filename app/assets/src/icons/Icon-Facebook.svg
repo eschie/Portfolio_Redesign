@@ -1,6 +1,6 @@
 <svg width="27px" height="27px" viewBox="0 0 27 27">
     <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Icon-Facebook" sketch:type="MSArtboardGroup" transform="translate(-11.000000, -11.000000)" stroke="#FFFFFF" stroke-width="2">
+        <g id="Icon-Facebook" sketch:type="MSArtboardGroup" transform="translate(-11.000000, -11.000000)" class="iconstroke" stroke-width="2">
             <g id="Facebook-2" sketch:type="MSLayerGroup" transform="translate(11.000000, 11.000000)">
                 <path d="M23.1833333,0 L5.35,0 C2.52898958,0 0,2.03836634 0,4.45544554 L0,22.2772277 C0,24.7277228 2.52898958,26.7326733 5.35,26.7326733 L23.1833333,26.7326733 C25.2230208,26.7326733 26.75,24.7277228 26.75,22.2772277 L26.75,4.45544554 C26.75,2.03836634 25.2230208,0 23.1833333,0 L23.1833333,0 Z" id="Path-copy" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
                 <path d="M18.7319661,8.26911548 C18.7319661,8.26911548 18.0365489,8.23931099 16.6421224,8.04438525 C15.2476959,7.84945932 13.3750003,7.99209833 13.3750001,9.90550464 C13.3749999,11.8189109 13.3750001,25.6641727 13.3750001,25.6641727" id="Path-26" sketch:type="MSShapeGroup"></path>
