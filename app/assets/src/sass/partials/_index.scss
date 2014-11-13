@@ -14,16 +14,20 @@
         box-sizing: border-box;
         border: 1px solid rgb(0,0,0);
         border: 1px solid rgba(0,0,0,0.10);
-        -webkit-transition: background-color .2s ease-out;
-        -moz-transition: background-color .2s ease-out;
-        -o-transition: background-color .2s ease-out;
-        transition: background-color .2s ease-out;
+        -webkit-transition: background-color 200ms ease-out;
+        -moz-transition: background-color 200ms ease-out;
+        -o-transition: background-color 200ms ease-out;
+        transition: background-color 200ms ease-out;
         
         &:hover{
             background-color: rgb(0,0,0);
             background-color: rgba(0,0,0,0.30);
             font-weight: bold;
             color: rgb(256,256,256);
+
+            .icon{
+                height:45%;
+            }
         }
 
         .icon {
@@ -32,8 +36,12 @@
             top: 35%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 40%;
-            height: 40%;
+            width: 35%;
+            height: 35%;
+            -webkit-transition: height 100ms ease-out;
+            -moz-transition: height 100ms ease-out;
+            -o-transition: height 100ms ease-out;
+            transition: height 100ms ease-out;
         }
 
         .icon use {
@@ -55,8 +63,8 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 text-align: center;
-                font-size: 100%;
-                letter-spacing: 7.75px;
+                font-size: 125%;
+                letter-spacing: .75em;
                 font-weight: bold;
             }
         }
