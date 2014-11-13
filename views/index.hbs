@@ -1,5 +1,4 @@
-<div class="content-container">
-<form action="" id="addTask">
+{{!-- <form action="" id="addTask">
     <input type="text" placeholder="Your new task" id="">
     <input type="submit" value="Add Task" id="">
 </form>
@@ -7,5 +6,39 @@
     <script id="taskTemplate" type="text/template">
         <span><%= title %></span> <button class="edit">Edit</button> <button class="delete">Delete</button>
     </script>
-</div>
-</div>
+</div> --}}
+
+<ul class="content-nav">
+    <li class="content-page">
+            <a class="pagelink" href="./work">
+                <svg class='icon'>
+                  <use xlink:href='#icon-Icon-Work'/>
+                </svg>
+                <p>WORK</p>
+            </a>
+    </li>
+    <li class="content-page">
+            <a class="pagelink" href="./portfolio">
+                <svg class='icon'>
+                  <use xlink:href='#icon-Icon-Portfolio'/>
+                </svg>
+                <p>PORTFOLIO</p>
+            </a>
+    </li>
+    <li class="content-page">
+            <a class="pagelink" href="./projects">
+                <svg class='icon'>
+                  <use xlink:href='#icon-Icon-Projects'/>
+                </svg>
+                <p>PROJECTS</p>
+            </a>
+    </li>
+    <li class="content-page">
+            <a class="pagelink" href="./contact">
+                <svg class='icon'>
+                  <use xlink:href='#icon-Icon-Contact'/>
+                </svg>
+                <p>CONTACT</p>
+            </a>
+    </li>
+</ul>

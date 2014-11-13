@@ -54,14 +54,13 @@ a:hover {
 body {
   background-color: #cbc7e8;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIwJSIgY3k9IjAlIiByPSIxNDEuNDIxMzU2MjM3MzA5NSUiPjxzdG9wIHN0b3AtY29sb3I9IiM4YmU1ZWIiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2U5YmFmOSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNjciLz48c3RvcCBzdG9wLWNvbG9yPSIjZjFiMGIwIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMSIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==);
-  background-image: -webkit-repeating-radial-gradient(ellipse farthest-corner at left top, #8be5eb 0, #e9baf9 67%, #f1b0b0 100%);
   background-image: repeating-radial-gradient(ellipse farthest-corner at left top, #8be5eb 0, #e9baf9 67%, #f1b0b0 100%);
   font-family: "PT Sans", "Arial";
   font-size: 1em;
   color: white;
 }
 
-.sidebar {
+.menu {
   width: 110px;
   height: 100%;
   background-color: black;
@@ -70,13 +69,13 @@ body {
   top: 0;
   left: 0;
 }
-.sidebar .key {
+.menu .key {
   width: 100%;
   height: 20px;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.sidebar .key p {
+.menu .key p {
   padding-top: 6%;
   padding-bottom: 5%;
   text-align: center;
@@ -84,133 +83,141 @@ body {
   display: block;
   letter-spacing: 1px;
 }
-.sidebar .port {
+.menu .port {
   position: relative;
   width: 100%;
   height: 80px;
 }
-.sidebar .circle {
+.menu .circle {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   height: 50px;
   width: 50px;
   margin: 0 auto;
 }
-.sidebar .circle:before, .sidebar .circle:after {
+.menu .circle:before, .menu .circle:after {
   content: "";
   position: absolute;
 }
-.sidebar .circle:before {
+.menu .circle:before {
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: -webkit-linear-gradient(224deg, #FFFFFF 0%, #FFFFFF 0%, #E8E8E8 0%, #ECECEC 29%, #BABABA 77%, #737373 100%);
+  background-image: -o-linear-gradient(-44deg, #FFFFFF 0%, #FFFFFF 0%, #E8E8E8 0%, #ECECEC 29%, #BABABA 77%, #737373 100%);
+  background-image: -moz-linear-gradient(-44deg, #FFFFFF 0%, #FFFFFF 0%, #E8E8E8 0%, #ECECEC 29%, #BABABA 77%, #737373 100%);
+  background-image: -ms-linear-gradient(-44deg, #FFFFFF 0%, #FFFFFF 0%, #E8E8E8 0%, #ECECEC 29%, #BABABA 77%, #737373 100%);
   background-image: linear-gradient(-134deg, #FFFFFF 0%, #FFFFFF 0%, #E8E8E8 0%, #ECECEC 29%, #BABABA 77%, #737373 100%);
+  -moz-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.6);
+  -webkit-border-radius: 100;
   border-radius: 100;
   z-index: 1;
 }
-.sidebar .circle:after {
+.menu .circle:after {
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: 2;
 }
-.sidebar .circle .avatar {
+.menu .circle .avatar {
   position: relative;
   z-index: 2;
   width: inherit;
   height: inherit;
 }
-.sidebar .circle .avatar .thumbnail-round {
+.menu .circle .avatar .thumbnail-round {
   top: 3%;
   left: 3%;
   right: 3%;
   bottom: 3%;
   max-width: 94%;
   position: absolute;
+  -webkit-border-radius: 100;
   border-radius: 100;
 }
-.sidebar .nav .btn {
+.menu .nav .btn {
   position: relative;
   width: 100%;
   height: 8%;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-transition: background-color .2s ease-out;
+  -moz-transition: background-color .2s ease-out;
+  -o-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
 }
-.sidebar .nav .btn:hover {
+.menu .nav .btn:hover {
   background-color: black;
   background-color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  color: white;
 }
-.sidebar .nav .btn .icon {
+.menu .nav .btn .icon {
   display: inline-block;
   position: absolute;
   top: 35%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 30%;
   height: 30%;
 }
-.sidebar .nav .btn .icon use {
-  stroke: black;
+.menu .nav .btn .icon use {
+  stroke: white;
+  fill: white;
 }
-.sidebar .nav .btn p {
-  display: inline-block;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: 10%;
-  font-weight: bold;
-  letter-spacing: 3.75px;
-}
-.sidebar .nav .btn a.navlink {
+.menu .nav .btn a.navlink {
   display: block;
   width: 100%;
   height: 100%;
 }
-.sidebar .social .btn {
+.menu .nav .btn a.navlink p {
+  display: inline-block;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 10%;
+  letter-spacing: 3.75px;
+}
+.menu .social .btn {
   position: relative;
   width: 100%;
   height: 6.6%;
 }
-.sidebar .social .btn .icon {
+.menu .social .btn .icon {
   display: inline-block;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 30%;
-  height: 30%;
+  transform: translate(-50%, -50%);
+  width: 33%;
+  height: 33%;
 }
-.sidebar .social .btn .icon use {
-  stroke: black;
-  fill: none;
+.menu .social .btn .icon use {
+  stroke: white;
+  stroke: rgba(255, 255, 255, 0.6);
+  fill: white;
+  fill: rgba(255, 255, 255, 0.6);
 }
-.sidebar .social .btn .icon use:hover {
-  stroke: black;
-}
-.sidebar .social .btn a.soclink {
+.menu .social .btn a.soclink {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-svg {
-  -webkit-text-stroke-color: red;
+.iconfill {
+  fill: white;
+  fill: rgba(255, 255, 255, 0.6);
+}
+.iconfill:hover {
+  fill: white;
 }
 
 .content-container {
@@ -220,3 +227,62 @@ svg {
   position: relative;
   overflow: auto;
 }
+
+.content-nav .content-page {
+  display: block;
+  width: 50%;
+  height: 50%;
+  float: left;
+  text-align: center;
+  position: relative;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  color: rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-transition: background-color .2s ease-out;
+  -moz-transition: background-color .2s ease-out;
+  -o-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+}
+.content-nav .content-page:hover {
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  color: white;
+}
+.content-nav .content-page .icon {
+  display: inline-block;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 40%;
+}
+.content-nav .content-page .icon use {
+  stroke: white;
+  stroke: rgba(255, 255, 255, 0.6);
+  fill: white;
+  fill: rgba(255, 255, 255, 0.6);
+}
+.content-nav .content-page a.pagelink {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.content-nav .content-page a.pagelink p {
+  display: inline-block;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 100%;
+  letter-spacing: 7.75px;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=main.css.map */

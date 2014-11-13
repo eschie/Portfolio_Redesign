@@ -19,7 +19,17 @@ body {
     color: $font_color_default;
 }
 
-@import "./partials/sidebar";
+@import "./partials/menu";
+
+.iconfill{
+    fill: rgb(256,256,256);
+    fill: rgba(256,256,256,0.60);
+
+    &:hover{
+        fill: rgb(256,256,256);
+
+    }
+}
 
 .content-container {
     margin-left: 110px;
@@ -28,6 +38,8 @@ body {
     position: relative;
     overflow: auto;
 }
+
+@import "./partials/index";
 
 @import "./partials/work";
 @import "./partials/portfolio";

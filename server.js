@@ -29,6 +29,7 @@ app.use(cookieParser());
 app.use(expressValidator());
 app.use(bodyParser.json());
 
+// TODO - set proper static folders
 app.use('/app/assets/dist', express.static(__dirname + '/app/assets/dist'));
 app.use('/app/assets/src', express.static(__dirname + '/app/assets/src'));
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
@@ -37,6 +38,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+// TODO - configure dev/prod envs
 var assets = assetmanager.process({
     assets: require('./config/assets.json'),
     debug: process.env.NODE_ENV !== 'production',
@@ -52,7 +54,7 @@ var routes = require('./routes/routes');
 routes(app);
 
 // Connection URL
-var url = 'mongodb://localhost:27017/myproject';
+var url = 'mongodb://localhost:27017/';
 // Use connect method to connect to the Server
 MongoClient.connect(url, function(err, db) {
   assert.equal(null, err);
