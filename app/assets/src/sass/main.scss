@@ -22,10 +22,14 @@ body {
 @import "./partials/sidebar";
 
 .content-container {
-    padding-left: 110px;
+    margin-left: 110px;
     width:auto;
     height:100%;
     position: relative;
     overflow: auto;
 }
 
+@import "./partials/work";
+@import "./partials/portfolio";
+@import "./partials/projects";
+@import "./partials/contact";

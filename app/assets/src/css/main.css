@@ -42,6 +42,15 @@ table {
   clear: both;
 }
 
+a, a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
 body {
   background-color: #cbc7e8;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIwJSIgY3k9IjAlIiByPSIxNDEuNDIxMzU2MjM3MzA5NSUiPjxzdG9wIHN0b3AtY29sb3I9IiM4YmU1ZWIiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2U5YmFmOSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNjciLz48c3RvcCBzdG9wLWNvbG9yPSIjZjFiMGIwIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMSIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==);
@@ -166,6 +175,11 @@ body {
   font-weight: bold;
   letter-spacing: 3.75px;
 }
+.sidebar .nav .btn a.navlink {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .sidebar .social .btn {
   position: relative;
   width: 100%;
@@ -189,13 +203,18 @@ body {
 .sidebar .social .btn .icon use:hover {
   stroke: black;
 }
+.sidebar .social .btn a.soclink {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
 svg {
   -webkit-text-stroke-color: red;
 }
 
 .content-container {
-  padding-left: 110px;
+  margin-left: 110px;
   width: auto;
   height: 100%;
   position: relative;

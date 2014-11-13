@@ -34,3 +34,10 @@ table {
 .clear{
     clear: both;
 }
+a, a:visited,{
+    color: inherit;
+    text-decoration: none;
+}
+a:hover{
+    font-weight: bold;
+}

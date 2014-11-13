@@ -11,13 +11,9 @@
 </head>
 <body>
 
-{{{body}}}
+{{> sidebar}}
 
-<div class="content-container">
-    <script id="personTemplate" type="text/template">
-        <strong><%= name %></strong> (<%= age %>) - <%= occupation %>
-    </script>
-</div>
+{{{body}}}
 
 <div id='icon-container' style='display:none;'></div>
 <script src='app/assets/dist/js/icons.js'></script>

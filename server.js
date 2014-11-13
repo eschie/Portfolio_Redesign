@@ -8,7 +8,10 @@ var cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
     session = require('express-session'),
     assetmanager = require('assetmanager'),
-    expressHbs = require('express-handlebars');
+    expressHbs = require('express-handlebars'),
+    MongoClient = require('mongodb').MongoClient,
+    mongoose = require('mongoose'),
+    assert = require('assert');
 
 app.set('title','Eschie.info');
 app.set('showStackError', true);
@@ -47,6 +50,16 @@ app.use(function(req, res, next) {
 
 var routes = require('./routes/routes');
 routes(app);
+
+// Connection URL
+var url = 'mongodb://localhost:27017/myproject';
+// Use connect method to connect to the Server
+MongoClient.connect(url, function(err, db) {
+  assert.equal(null, err);
+  console.log("Connected correctly to server");
+
+  db.close();
+});
 
 app.set('port', process.env.PORT || 8000);
 var server = app.listen(app.get('port'), function() {

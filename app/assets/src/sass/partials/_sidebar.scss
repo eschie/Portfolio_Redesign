@@ -123,6 +123,12 @@
                 font-weight: bold;
                 letter-spacing: 3.75px;
             }
+
+            a.navlink{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 
@@ -149,6 +155,12 @@
               &:hover{
                 stroke: black;
               }
+            }
+
+            a.soclink{
+                display: block;
+                width: 100%;
+                height: 100%;
             }
 
         }
