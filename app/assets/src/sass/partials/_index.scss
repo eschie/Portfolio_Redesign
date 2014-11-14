@@ -10,10 +10,11 @@
             opacity: 0;
 
             // Transition: Non-active panel scale down
-            -webkit-transform: scale(0.5);
-            -moz-transform: scale(0.5);
-            -ms-transform: scale(0.5);
-            transform: scale(0.5);
+            -webkit-transform: scale(0);
+            -moz-transform: scale(0);
+            -ms-transform: scale(0);
+            transform: scale(0);
+
         }
     }
     
@@ -36,10 +37,10 @@
         border: 1px solid rgba(256,256,256,0);
         
         // Transition: Expanded/Contract Panel
-        -webkit-transition: all 500ms ease-in-out;
-        -moz-transition: all 500ms ease-in-out;
-        -o-transition: all 500ms ease-in-out;
-        transition: all 500ms ease-in-out;
+        -webkit-transition: all 1000ms ease-in-out;
+        -moz-transition: all 1000ms ease-in-out;
+        -o-transition: all 1000ms ease-in-out;
+        transition: all 1000ms ease-in-out;
 
         &.box-panel-expand-top{
             z-index: 100;
@@ -54,10 +55,10 @@
             opacity: 1;
             
             // Transition: overlay background on hover && overlay opacity on contract
-            -webkit-transition: background-color 200ms ease-out, opacity 500ms ease-in;
-            -moz-transition: background-color 200ms ease-out, opacity 500ms ease-in;
-            -o-transition: background-color 200ms ease-out, opacity 500ms ease-in;
-            transition: background-color 200ms ease-out, opacity 500ms ease-in;
+            -webkit-transition: background-color 300ms ease-out, opacity 1200ms ease-in;
+            -moz-transition: background-color 300ms ease-out, opacity 1200ms ease-in;
+            -o-transition: background-color 300ms ease-out, opacity 1200ms ease-in;
+            transition: background-color 300ms ease-out, opacity 1200ms ease-in;
             
             &:hover{
                 background-color: rgb(0,0,0);
@@ -78,6 +79,9 @@
                 position: absolute;
                 top: 35%;
                 left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
                 width: 35%;
                 height: 35%;
@@ -112,6 +116,9 @@
                     position: absolute;
                     top: 75%;
                     left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -moz-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
                     transform: translate(-50%, -50%);
                     text-align: center;
                     font-size: 150%;
@@ -133,21 +140,20 @@
             opacity:0;
             pointer-events: none;
             position:absolute;
-            top:60px;
-            left:30px;
+            top:15px;
+            left:20px;
             right: 30px;
-            bottom: 60px;
-            padding: 0 20px;
+            bottom: 20px;
             overflow: hidden;
             overflow-y: auto;
         }
 
         .box-panel-content, .box-panel-close{
             // Transition: content && close button opacity on contract
-            -webkit-transition: opacity 200ms ease-out;
-            -moz-transition: opacity 200ms ease-out;
-            -o-transition: opacity 200ms ease-out;
-            transition: opacity 200ms ease-out;
+            -webkit-transition: opacity 1000ms ease-in-out;
+            -moz-transition: opacity 1000ms ease-in-out;
+            -o-transition: opacity 1000ms ease-in-out;
+            transition: opacity 1000ms ease-in-out;
         }
 
         span.box-panel-close{
@@ -170,15 +176,17 @@
             left: 0;
             border-top:20px solid rgb(0,0,0);
             border-top:20px solid rgba(0,0,0,0.30);
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.30);
 
             .box-panel-overlay{
                 opacity: 0;
 
                 // Transition: panel overlay opacity on expand
-                -webkit-transition: opacity 200ms ease-out;
-                -moz-transition: opacity 200ms ease-out;
-                -o-transition: opacity 200ms ease-out;
-                transition: opacity 200ms ease-out;
+                -webkit-transition: opacity 1000ms ease-out;
+                -moz-transition: opacity 1000ms ease-out;
+                -o-transition: opacity 1000ms ease-out;
+                transition: opacity 1000ms ease-out;
             }
 
             .box-panel-content, .box-panel-close{
@@ -186,10 +194,10 @@
                 opacity: 1;
 
                 // Transition: content && close opacity on expand
-                -webkit-transition: opacity 200ms linear 500ms;
-                -moz-transition: opacity 200ms linear 500ms;
-                -o-transition: opacity 200ms linear 500ms;
-                transition: opacity 200ms linear 500ms;
+                -webkit-transition: opacity 1000ms ease-in-out;
+                -moz-transition: opacity 1000ms ease-in-out;
+                -o-transition: opacity 1000ms ease-in-out;
+                transition: opacity 1000ms ease-in-out;
             }
         }
     }

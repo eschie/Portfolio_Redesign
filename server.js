@@ -11,7 +11,8 @@ var cookieParser = require('cookie-parser'),
     expressHbs = require('express-handlebars'),
     MongoClient = require('mongodb').MongoClient,
     mongoose = require('mongoose'),
-    assert = require('assert');
+    assert = require('assert'),
+    data = require('./data.json');
 
 app.set('title','Eschie.info');
 app.set('showStackError', true);
@@ -44,9 +45,14 @@ var assets = assetmanager.process({
     debug: process.env.NODE_ENV !== 'production',
     webroot: /public\/|packages\//g
 });
+// var data = assetmanager.process({
+//     data: require('./data.json'),
+//     debug: process.env.NODE_ENV !== 'production'
+// });
 
 app.use(function(req, res, next) {
     res.locals.assets = assets;
+    res.locals.data = data;
     next();
 });
 

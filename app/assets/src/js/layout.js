@@ -32,18 +32,15 @@ var layout = (function() {
                         }
 
                     } ).find( 'span.box-panel-close' ).on( 'click', function() {
-                        console.log( 'closed' );
                         // close the expanded section and scale up the others
                         $section.data( 'open', false ).removeClass( 'box-panel-expand' ).on( transEndEventName, function( event ) {
                             if( !$( event.target ).is( 'section' ) ) {
-                                console.log( !$( event.target ).is( 'section' ) );
                                 return false;
                             }
                             $( this ).off( transEndEventName ).removeClass( 'box-panel-expand-top' );
                         } );
 
                         if( !supportTransitions ) {
-                            console.log( 'doesnt support - removing' );
                             $section.removeClass( 'box-panel-expand-top' );
                         }
 

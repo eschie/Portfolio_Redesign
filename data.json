@@ -1,0 +1,76 @@
+{
+    "experience": [
+        {
+            "content": {
+                "duration": "07/14 - Present",
+                "title": "Web Developer",
+                "employer": "Freelance",
+                "description": "Designed and devloped mobile-first, responsive web sites for individual clients and small companies for an hourly rate, utilizing LAMP/Wordpress and MEAN frameworks."
+            }
+        },
+        {
+            "content": {
+                "duration": "11/2013 - 7/2014  |  NEW YORK, NY",
+                "title": "Front-End Developer",
+                "employer": "About.com",
+                "description": "Developed and maintained the About.com legacy front-end code base, optimizing for performance on desktop and mobile. Eventually transitioned to maintaining and extending the current front-end platform, including template design and module creation."
+            }
+        },
+        {
+            "content": {
+                "duration": "06/2013 - 11/2013  |  NEW YORK, NY",
+                "title": "Web Developer",
+                "employer": "Freelance",
+                "description": "Designed and devloped mobile-first, responsive web sites for individual clients and small companies for an hourly rate, utilizing LAMP/Wordpress and MEAN frameworks."
+            }
+        },
+        {
+            "content": {
+                "duration": "03/2012 - 06/2013  |  NEW YORK, NY",
+                "title": "Web Developer/Marketing Specialist",
+                "employer": "Practising Law Institute",
+                "description": "Developed landing pages and mini-sites for individual marketing campaigns, authored marketing and sales analytics reports, oversaw pay-per-click and display ad campaigns, and composed, filmed, and edited marketing promotional videos."
+            }
+        },
+        {
+            "content": {
+                "duration": "10/2011 - 03/2012  |  NEW YORK, NY",
+                "title": "Video Marketing Intern",
+                "employer": "Practising Law Institute",
+                "description": "Created specialized informational and promotional video content for use in web marketing campaigns."
+            }
+        },
+        {
+            "content": {
+                "duration": "09/2011 - 06/2013  |  NEW YORK, NY",
+                "title": "Content Editor",
+                "employer": "HipHopDNA",
+                "description": "Responsible for contributing daily content and planning growth and development through content marketing and social media."
+            }
+        },
+        {
+            "content": {
+                "duration": "7/2010 - 7/2011  |  CHAPEL HILL, NC",
+                "title": "Fundraising Ambassador",
+                "employer": "UNC Development Office",
+                "description": "Raised over $60,000 in alumni/corporate contributions by speaking to over 30 prospective donors on a daily basis, while honing valuable sales and cold-calling skills."
+            }
+        }
+    ],
+    "education": [
+        {
+            "content": {
+                "duration": "08/2007 - 05/2011  |  CHAPEL HILL, NC",
+                "title": "Bachelor of Science in Psychology",
+                "institution": "UNC Chapel Hill"
+            }
+        },
+        {
+            "content": {
+                "duration": "08/2003 - 05/2007  |  ASHEVILLE, NC",
+                "title": "High School",
+                "institution": "Christ School"
+            }
+        }
+    ]
+}

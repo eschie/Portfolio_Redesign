@@ -1,3 +1,19 @@
-<h2>Experience</h2>
-<h2>Education</h2>
-<h2>Skills</h2>
+<div class="work-container">
+    <h2>Experience</h2>
+    {{#each data.experience }}
+    <div class="work-content">
+        <p class="duration">{{this.content.duration}}</p>
+        <h3 class="title">{{this.content.title}}  -  <span class="employer">{{this.content.employer}}</span></h3>
+        <p class="description">{{this.content.description}}</p>
+    </div>
+    {{/each}}
+    <h2>Education</h2>
+    {{#each data.education }}
+    <div class="education-content">
+        <p class="duration">{{this.content.duration}}</p>
+        <h3 class="title">{{this.content.title}}  -  <span class="institution">{{this.content.institution}}</span></h3>
+    </div>
+    {{/each}}
+</div>
+<script>
+</script>

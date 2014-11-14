@@ -91,6 +91,9 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   height: 50px;
   width: 50px;
@@ -162,6 +165,9 @@ body {
   position: absolute;
   top: 35%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 30%;
   height: 30%;
@@ -180,6 +186,9 @@ body {
   position: absolute;
   top: 75%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 10%;
@@ -205,6 +214,9 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 33%;
   height: 33%;
@@ -254,10 +266,10 @@ body {
 }
 .box-container.panel-expanded > section:not(.box-panel-expand) {
   opacity: 0;
-  -webkit-transform: scale(0.5);
-  -moz-transform: scale(0.5);
-  -ms-transform: scale(0.5);
-  transform: scale(0.5);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 .box-container > section:first-child {
   top: 0;
@@ -286,10 +298,10 @@ body {
   box-sizing: border-box;
   border: 1px solid white;
   border: 1px solid rgba(255, 255, 255, 0);
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
+  -webkit-transition: all 1000ms ease-in-out;
+  -moz-transition: all 1000ms ease-in-out;
+  -o-transition: all 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
 }
 .box-container section.box-panel-expand-top {
   z-index: 100;
@@ -301,10 +313,10 @@ body {
   text-align: center;
   position: relative;
   opacity: 1;
-  -webkit-transition: background-color 200ms ease-out, opacity 500ms ease-in;
-  -moz-transition: background-color 200ms ease-out, opacity 500ms ease-in;
-  -o-transition: background-color 200ms ease-out, opacity 500ms ease-in;
-  transition: background-color 200ms ease-out, opacity 500ms ease-in;
+  -webkit-transition: background-color 300ms ease-out, opacity 1200ms ease-in;
+  -moz-transition: background-color 300ms ease-out, opacity 1200ms ease-in;
+  -o-transition: background-color 300ms ease-out, opacity 1200ms ease-in;
+  transition: background-color 300ms ease-out, opacity 1200ms ease-in;
 }
 .box-container section .box-panel-overlay:hover {
   background-color: black;
@@ -320,6 +332,9 @@ body {
   position: absolute;
   top: 35%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 35%;
   height: 35%;
@@ -344,6 +359,9 @@ body {
   position: absolute;
   top: 75%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 150%;
@@ -356,19 +374,18 @@ body {
   opacity: 0;
   pointer-events: none;
   position: absolute;
-  top: 60px;
-  left: 30px;
+  top: 15px;
+  left: 20px;
   right: 30px;
-  bottom: 60px;
-  padding: 0 20px;
+  bottom: 20px;
   overflow: hidden;
   overflow-y: auto;
 }
 .box-container section .box-panel-content, .box-container section .box-panel-close {
-  -webkit-transition: opacity 200ms ease-out;
-  -moz-transition: opacity 200ms ease-out;
-  -o-transition: opacity 200ms ease-out;
-  transition: opacity 200ms ease-out;
+  -webkit-transition: opacity 1000ms ease-in-out;
+  -moz-transition: opacity 1000ms ease-in-out;
+  -o-transition: opacity 1000ms ease-in-out;
+  transition: opacity 1000ms ease-in-out;
 }
 .box-container section span.box-panel-close {
   display: block;
@@ -389,21 +406,116 @@ body {
   left: 0;
   border-top: 20px solid black;
   border-top: 20px solid rgba(0, 0, 0, 0.3);
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .box-container section.box-panel-expand .box-panel-overlay {
   opacity: 0;
-  -webkit-transition: opacity 200ms ease-out;
-  -moz-transition: opacity 200ms ease-out;
-  -o-transition: opacity 200ms ease-out;
-  transition: opacity 200ms ease-out;
+  -webkit-transition: opacity 1000ms ease-out;
+  -moz-transition: opacity 1000ms ease-out;
+  -o-transition: opacity 1000ms ease-out;
+  transition: opacity 1000ms ease-out;
 }
 .box-container section.box-panel-expand .box-panel-content, .box-container section.box-panel-expand .box-panel-close {
   pointer-events: auto;
   opacity: 1;
-  -webkit-transition: opacity 200ms linear 500ms;
-  -moz-transition: opacity 200ms linear 500ms;
-  -o-transition: opacity 200ms linear 500ms;
-  transition: opacity 200ms linear 500ms;
+  -webkit-transition: opacity 1000ms ease-in-out;
+  -moz-transition: opacity 1000ms ease-in-out;
+  -o-transition: opacity 1000ms ease-in-out;
+  transition: opacity 1000ms ease-in-out;
+}
+
+.work-container {
+  position: absolute;
+  left: 100px;
+  width: 65%;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.work-container:after {
+  position: absolute;
+  top: 0;
+  content: " ";
+  width: 3px;
+  height: 100%;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-blend-mode: multiply;
+  margin-left: -60px;
+}
+.work-container h2 {
+  font-size: 2.25em;
+  letter-spacing: 7.5px;
+  line-height: 50px;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  color: white;
+  color: rgba(255, 255, 255, 0.7);
+}
+.work-container h2:before {
+  content: " ";
+  position: absolute;
+  margin-left: -83px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffbebe;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.work-container h3 {
+  font-size: 1em;
+  letter-spacing: 7.5px;
+  line-height: 46px;
+}
+.work-container h3:before {
+  content: " ";
+  position: absolute;
+  margin-left: -66px;
+  margin-top: 7px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffbebe;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.work-container .work-content {
+  height: 100px;
+  padding: 20px 0;
+}
+.work-container .education-content {
+  height: 60px;
+  padding: 20px 0;
+}
+.work-container .duration {
+  font-size: .75em;
+  font-weight: bold;
+  color: white;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 1.5px;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.work-container .title {
+  font-size: 1em;
+  line-height: 1.5em;
+  letter-spacing: 3.5px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.work-container .title .employer, .work-container .title .institution {
+  font-size: .75em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  color: #ffbebe;
+}
+.work-container .description {
+  font-size: .9em;
+  line-height: 1.25em;
+  letter-spacing: 1px;
+  color: white;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /*# sourceMappingURL=main.css.map */

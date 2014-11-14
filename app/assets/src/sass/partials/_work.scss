@@ -1,0 +1,98 @@
+.work-container{
+    position: absolute;
+    left: 100px;
+    width:65%;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+
+    &:after {
+        position: absolute;
+        top: 0;
+        content: " ";
+        width: 3px;
+        height: 100%;
+        background-color: rgb(256,256,256);
+        background-color: rgba(256,256,256,0.20);
+        background-blend-mode: multiply;
+        margin-left: -60px;
+    }
+    h2{
+        font-size: 2.25em;
+        letter-spacing: 7.5px;
+        line-height: 50px;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        color: rgb(256,256,256);
+        color: rgba(256,256,256,0.70);
+
+        &:before{
+            content: " ";
+            position: absolute;
+            margin-left: -83px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ffbebe;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+    }
+
+    h3{
+        font-size: 1em;
+        letter-spacing: 7.5px;
+        line-height: 46px;
+
+        &:before{
+            content: " ";
+            position: absolute;
+            margin-left: -66px;
+            margin-top: 7px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #ffbebe;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+    }
+    .work-content{
+        height:100px;
+        padding: 20px 0;
+    }
+    .education-content{
+        height:60px;
+        padding: 20px 0;
+    }
+    .duration{
+        font-size: .75em;
+        font-weight: bold;
+        color: rgb(256,256,256);
+        color: rgba(256,256,256,0.60);
+        letter-spacing: 1.5px;
+        line-height: 1em;
+        text-transform: uppercase;
+    }
+    .title{
+        font-size: 1em;
+        line-height: 1.5em;
+        letter-spacing: 3.5px;
+        padding: 10px 0;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        .employer,.institution{
+            font-size: .75em;
+            line-height: 1.5em;
+            text-transform: uppercase;
+            color: rgb(256,190,190);
+        }
+    }
+    .description{
+        font-size: .9em;
+        line-height: 1.25em;
+        letter-spacing: 1px;
+        color: rgb(256,256,256);
+        color: rgba(256,256,256,0.70);
+    }
+
+}
