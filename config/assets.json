@@ -9,7 +9,8 @@
         "app/assets/dist/js/min/lib.min.js": [
             "bower_components/jquery/dist/jquery.min.js",
             "bower_components/underscore/underscore.js",
-            "bower_components/backbone/backbone.js"
+            "bower_components/backbone/backbone.js",
+            "bower_components/modernizr/modernizr.js"
         ]
     }
   }

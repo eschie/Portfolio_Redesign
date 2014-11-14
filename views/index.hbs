@@ -8,37 +8,61 @@
     </script>
 </div> --}}
 
-<ul class="content-nav">
-    <li class="content-page">
-            <a class="pagelink" href="./work">
+<div class="box-container">
+    <section id="box-work" class="box-panel">
+        <div class="box-panel-overlay">
+            <div class="pagelink" href="#">
                 <svg class='icon'>
                   <use xlink:href='#icon-Icon-Work'/>
                 </svg>
                 <p>WORK</p>
-            </a>
-    </li>
-    <li class="content-page">
-            <a class="pagelink" href="./portfolio">
+            </div>
+        </div>
+        <div class="box-panel-content">
+            {{> sections/work}}
+        </div>
+        <span class="box-panel-close">X</span>
+    </section>
+    <section id="box-portfolio" class="box-panel">
+        <div class="box-panel-overlay">
+            <div class="pagelink" href="#">
                 <svg class='icon'>
                   <use xlink:href='#icon-Icon-Portfolio'/>
                 </svg>
                 <p>PORTFOLIO</p>
-            </a>
-    </li>
-    <li class="content-page">
-            <a class="pagelink" href="./projects">
+            </div>
+        </div>
+        <div class="box-panel-content">
+            {{> sections/portfolio}}
+        </div>
+        <span class="box-panel-close">X</span>
+    </section>
+    <section id="box-projects" class="box-panel">
+        <div class="box-panel-overlay">
+            <div class="pagelink" href="#">
                 <svg class='icon'>
                   <use xlink:href='#icon-Icon-Projects'/>
                 </svg>
                 <p>PROJECTS</p>
-            </a>
-    </li>
-    <li class="content-page">
-            <a class="pagelink" href="./contact">
+            </div>
+        </div>
+        <div class="box-panel-content">
+            {{> sections/projects}}
+        </div>
+        <span class="box-panel-close">X</span>
+    </section>
+    <section id="box-contact" class="box-panel">
+        <div class="box-panel-overlay">
+            <div class="pagelink" href="#">
                 <svg class='icon'>
                   <use xlink:href='#icon-Icon-Contact'/>
                 </svg>
                 <p>CONTACT</p>
-            </a>
-    </li>
-</ul>
+            </div>
+        </div>
+        <div class="box-panel-content">
+            {{> sections/contact}}
+        </div>
+        <span class="box-panel-close">X</span>
+    </section>
+</div>

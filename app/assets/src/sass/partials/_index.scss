@@ -1,71 +1,195 @@
-.content-nav{
+// Panel Container
+.box-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 
-    .content-page{
+    &.panel-expanded{
+        > section:not(.box-panel-expand){
+            opacity: 0;
+
+            // Transition: Non-active panel scale down
+            -webkit-transform: scale(0.5);
+            -moz-transform: scale(0.5);
+            -ms-transform: scale(0.5);
+            transform: scale(0.5);
+        }
+    }
+    
+    // Panel Positioning
+    > section:first-child{ top: 0; left: 0; }
+    > section:nth-child(2){ top: 0; left: 50%; }
+    > section:nth-child(3){ top: 50%; left: 0; }
+    > section:nth-child(4){ top: 50%; left: 50%; }
+
+    section{
         display: block;
-        width:50%;
-        height:50%;
-        float:left;
-        text-align: center;
-        position: relative;
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        opacity:1;
         background-color: rgb(0,0,0);
         background-color: rgba(0,0,0,0.10);
-        color: rgb(256,256,256);
-        color: rgba(256,256,256,0.60);
         box-sizing: border-box;
-        border: 1px solid rgb(0,0,0);
-        border: 1px solid rgba(0,0,0,0.10);
-        -webkit-transition: background-color 200ms ease-out;
-        -moz-transition: background-color 200ms ease-out;
-        -o-transition: background-color 200ms ease-out;
-        transition: background-color 200ms ease-out;
+        border: 1px solid rgb(256,256,256);
+        border: 1px solid rgba(256,256,256,0);
         
-        &:hover{
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.30);
-            font-weight: bold;
-            color: rgb(256,256,256);
+        // Transition: Expanded/Contract Panel
+        -webkit-transition: all 500ms ease-in-out;
+        -moz-transition: all 500ms ease-in-out;
+        -o-transition: all 500ms ease-in-out;
+        transition: all 500ms ease-in-out;
 
-            .icon{
-                height:45%;
-            }
+        &.box-panel-expand-top{
+            z-index: 100;
         }
 
-        .icon {
-            display: inline-block;
-            position: absolute;
-            top: 35%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 35%;
-            height: 35%;
-            -webkit-transition: height 100ms ease-out;
-            -moz-transition: height 100ms ease-out;
-            -o-transition: height 100ms ease-out;
-            transition: height 100ms ease-out;
-        }
-
-        .icon use {
-          stroke: rgb(256,256,256);
-          stroke: rgba(256,256,256,0.60);
-          fill: rgb(256,256,256);
-          fill: rgba(256,256,256,0.60);
-        }
-
-        a.pagelink{
+        .box-panel-overlay{
             display: block;
-            width: 100%;
-            height: 100%;
+            width:100%;
+            height:100%;
+            text-align: center;
+            position: relative;
+            opacity: 1;
+            
+            // Transition: overlay background on hover && overlay opacity on contract
+            -webkit-transition: background-color 200ms ease-out, opacity 500ms ease-in;
+            -moz-transition: background-color 200ms ease-out, opacity 500ms ease-in;
+            -o-transition: background-color 200ms ease-out, opacity 500ms ease-in;
+            transition: background-color 200ms ease-out, opacity 500ms ease-in;
+            
+            &:hover{
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.20);
+                font-weight: bold;
+                color: rgb(256,256,256);
+                
+                .pagelink p{
+                    font-size: 125%;
+                }
+                .icon{
+                    height:45%;
+                }
+            }
 
-            p{
+            .icon {
                 display: inline-block;
                 position: absolute;
-                top: 75%;
+                top: 35%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                text-align: center;
-                font-size: 125%;
-                letter-spacing: .75em;
-                font-weight: bold;
+                width: 35%;
+                height: 35%;
+                
+                // Transition: Icon Height on hover
+                -webkit-transition: height 200ms ease-out;
+                -moz-transition: height 200ms ease-out;
+                -o-transition: height 200ms ease-out;
+                transition: height 200ms ease-out;
+            }
+
+            .icon use {
+              stroke: rgb(256,256,256);
+              stroke: rgba(256,256,256,0.60);
+              fill: rgb(256,256,256);
+              fill: rgba(256,256,256,0.60);
+            }
+
+            div.pagelink{
+                display: block;
+                width: 100%;
+                height: 100%;
+                
+                // // Transition
+                // -webkit-transition: all 2000ms ease-in-out;
+                // -moz-transition: all 2000ms ease-in-out;
+                // -o-transition: all 2000ms ease-in-out;
+                // transition: all 2000ms ease-in-out;
+
+                p{
+                    display: inline-block;
+                    position: absolute;
+                    top: 75%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    font-size: 100%;
+                    letter-spacing: .75em;
+                    font-weight: bold;
+                    color: rgb(256,256,256);
+                    color: rgba(256,256,256,0.60);
+                    
+                    // Transition: fontsize on hover
+                    -webkit-transition: font-size 200ms ease-out;
+                    -moz-transition: font-size 200ms ease-out;
+                    -o-transition: font-size 200ms ease-out;
+                    transition: font-size 200ms ease-out;
+                }
+            }
+        }
+        
+        .box-panel-content{
+            opacity:0;
+            pointer-events: none;
+            position:absolute;
+            top:60px;
+            left:30px;
+            right: 30px;
+            bottom: 60px;
+            padding: 0 20px;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+
+        .box-panel-content, .box-panel-close{
+            // Transition: content && close button opacity on contract
+            -webkit-transition: opacity 200ms ease-out;
+            -moz-transition: opacity 200ms ease-out;
+            -o-transition: opacity 200ms ease-out;
+            transition: opacity 200ms ease-out;
+        }
+
+        span.box-panel-close{
+            display: block;
+            font-size: 2em;
+            margin-bottom: 10px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 100;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &.box-panel-expand{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-top:20px solid rgb(0,0,0);
+            border-top:20px solid rgba(0,0,0,0.30);
+
+            .box-panel-overlay{
+                opacity: 0;
+
+                // Transition: panel overlay opacity on expand
+                -webkit-transition: opacity 200ms ease-out;
+                -moz-transition: opacity 200ms ease-out;
+                -o-transition: opacity 200ms ease-out;
+                transition: opacity 200ms ease-out;
+            }
+
+            .box-panel-content, .box-panel-close{
+                pointer-events: auto;
+                opacity: 1;
+
+                // Transition: content && close opacity on expand
+                -webkit-transition: opacity 200ms linear 500ms;
+                -moz-transition: opacity 200ms linear 500ms;
+                -o-transition: opacity 200ms linear 500ms;
+                transition: opacity 200ms linear 500ms;
             }
         }
     }
