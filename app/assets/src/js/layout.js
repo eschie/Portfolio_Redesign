@@ -1,6 +1,8 @@
 var layout = (function() {
 
     var $el = $( '.box-container' ),
+        $menu = $( '.menu' ),
+        $contentContainer = $( '.content-container' ),
         $sections = $el.children( 'section' ),
         transEndEventNames = {
             'WebkitTransition' : 'webkitTransitionEnd',
@@ -28,7 +30,9 @@ var layout = (function() {
                         if( !$section.data( 'open' ) ) {
                             $section.data( 'open', true ).addClass( 'box-panel-expand box-panel-expand-top' );
                             // $section.children('.box-panel-cover').addClass('box-panel-cover-hide');
-                            $el.addClass( 'panel-expanded' );   
+                            $el.addClass( 'panel-expanded' );
+                            $menu.addClass( 'menu-contract' );
+                            $contentContainer.addClass( 'content-container-contract');
                         }
 
                     } ).find( 'span.box-panel-close' ).on( 'click', function() {
@@ -38,6 +42,7 @@ var layout = (function() {
                                 return false;
                             }
                             $( this ).off( transEndEventName ).removeClass( 'box-panel-expand-top' );
+                            $menu.removeClass( 'menu-contract' );
                         } );
 
                         if( !supportTransitions ) {
@@ -47,6 +52,8 @@ var layout = (function() {
                         // $section.children('.box-panel-cover').removeClass('box-panel-cover-hide');
 
                         $el.removeClass( 'panel-expanded' );
+                        $menu.removeClass( 'menu-contract' );
+                        $contentContainer.removeClass( 'content-container-contract');
                         
                         return false;
 

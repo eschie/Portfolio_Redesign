@@ -1,5 +1,5 @@
 .menu{
-    width: 110px;
+    width: $contract-amount;
     height: 100%;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.70);
@@ -7,17 +7,22 @@
     top:0;
     left:0;
 
+    -webkit-transition: width 1000ms ease-in-out;
+    -moz-transition: width 1000ms ease-in-out;
+    -o-transition: width 1000ms ease-in-out;
+    transition: width 1000ms ease-in-out;
+    
     .key{
+        display:block;
         width: 100%;
         height: 20px;
         background-color: rgb(0,0,0);
         background-color: rgba(0,0,0,0.30);
 
         p {
-            padding-top: 6%;
-            padding-bottom: 5%;
+            line-height: 20px;
             text-align: center;
-            font-size: 20%;
+            font-size: 10px;
             display: block;
             letter-spacing: 1px;
         }
@@ -26,20 +31,66 @@
     .port{
         position: relative;
         width:100%;
-        height:80px;
+        height:340px;
+
+        -webkit-transition: height 1000ms ease-in-out;
+        -moz-transition: height 1000ms ease-in-out;
+        -o-transition: height 1000ms ease-in-out;
+        transition: height 1000ms ease-in-out;
+
+        .me{
+            position: absolute;
+            top: 70%;
+            width: 100%;
+            display: block;
+            margin:0 auto;
+            .where{
+                padding-top: 10px;
+                text-align: center;
+                
+                .icon{
+                    vertical-align: middle;
+                    width: 30px;
+                    height: 30px;
+                }
+                span{
+                    font-size: .75em;
+                    line-height: 1em;
+                    letter-spacing: 3.5px;
+                    text-transform: uppercase;
+                }
+            }
+            p{
+                padding: 7px 0;
+                text-align: center;
+                font-size: .75em;
+                line-height: 1em;
+                letter-spacing: 3.5px;
+                text-transform: uppercase;
+                &.job{
+                    font-weight: bold;
+                    color: #FDBCBC;
+                }
+            }
+        }
     }
 
     .circle {
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
-        height: 50px;
-        width: 50px;
+        height: 180px;
+        width: 180px;
         margin: 0 auto;
+
+        -webkit-transition: width 1000ms ease-in-out, height 1000ms ease-in-out, top 1000ms ease-in-out ;
+        -moz-transition: width 1000ms ease-in-out, height 1000ms ease-in-out, top 1000ms ease-in-out ;
+        -o-transition: width 1000ms ease-in-out, height 1000ms ease-in-out, top 1000ms ease-in-out ;
+        transition: width 1000ms ease-in-out, height 1000ms ease-in-out, top 1000ms ease-in-out ;
 
         &:before, &:after {
             content: "";
@@ -89,79 +140,32 @@
     }
 
     .nav{
-        .btn{
-            position: relative;
-            width: 100%;
-            height: 8%;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.10);
-            color: rgb(256,256,256);
-            color: rgba(256,256,256,0.60);
-            -webkit-transition: background-color 200ms ease-out;
-            -moz-transition: background-color 200ms ease-out;
-            -o-transition: background-color 200ms ease-out;
-            transition: background-color 200ms ease-out;
-
-            &:hover{
-                background-color: rgb(0,0,0);
-                background-color: rgba(0,0,0,0.30);
-                font-weight: bold;
-                color: rgb(256,256,256);
-            }
-
-            .icon {
-                display: inline-block;
-                position: absolute;
-                top: 35%;
-                left: 50%;
-                -webkit-transform: translate(-50%, -50%);
-                -moz-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-                width: 30%;
-                height: 30%;
-            }
-            // TODO - remove 
-            .icon use {
-                stroke: rgb(256,256,256);
-                // stroke: rgba(256,256,256,0.60);
-                fill: rgb(256,256,256);
-                // fill: rgba(256,256,256,0.60);
-            }
-
-            a.navlink{
-                display: block;
-                width: 100%;
-                height: 100%;
-
-                p{
-                    display: inline-block;
-                    position: absolute;
-                    top: 75%;
-                    left: 50%;
-                    -webkit-transform: translate(-50%, -50%);
-                    -moz-transform: translate(-50%, -50%);
-                    -ms-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
-                    text-align: center;
-                    font-size: 10%;
-                    letter-spacing: 3.75px;
-                }
-            }
-        }
+        display: none;
     }
 
     .social{
+        display: block;
+        width: 80%;
+        height: 120px;
+        margin: 0 auto;
+
         .btn{
             position: relative;
-            width: 100%;
-            height: 6.6%;
+            width: 50px;
+            height: 50px;
+            float:left;
+            margin: 5px 7px;
+            background-color:rgb(0,0,0);
+            background-color:rgba(0,0,0,0.30);
+            border-radius:50;
             -webkit-transition: background-color 150ms ease-out;
             -moz-transition: background-color 150ms ease-out;
             -o-transition: background-color 150ms ease-out;
             transition: background-color 150ms ease-out;
 
             &:hover{
+                background-color:rgb(0,0,0);
+                background-color:rgba(0,0,0,0.90);
                 .icon{
                     height:44%;
                 }
@@ -180,25 +184,25 @@
                 -moz-transform: translate(-50%, -50%);
                 -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
-                width: 33%;
-                height: 33%;
+                width: 100%;
+                height: 40%;
                 -webkit-transition: height 100ms ease-out;
                 -moz-transition: height 100ms ease-out;
                 -o-transition: height 100ms ease-out;
                 transition: height 100ms ease-out;
             }
             
-            // TODO - remove 
-            .icon use {
-                stroke: rgb(256,256,256);
-                stroke: rgba(256,256,256,0.60);
-                fill: rgb(256,256,256);
-                fill: rgba(256,256,256,0.60);
+            // // TODO - remove 
+            // .icon use {
+            //     stroke: rgb(256,256,256);
+            //     stroke: rgba(256,256,256,0.60);
+            //     fill: rgb(256,256,256);
+            //     fill: rgba(256,256,256,0.60);
 
-              &:hover{
+            //   &:hover{
 
-              }
-            }
+            //   }
+            // }
 
             a.soclink{
                 display: block;
@@ -206,6 +210,146 @@
                 height: 100%;
             }
 
+        }
+    }
+
+    .bio{
+        width: 70%;
+        margin: 10px auto;
+        padding: 20px;
+        background-color: rgb(256,256,256);
+        background-color: rgba(256,256,256,0.10);
+
+        p{
+            font-size:.9em;
+            line-height: 1.25em;
+            letter-spacing: 1px;
+        }
+    }
+
+    // Contracted Menu
+    // Transitions and such
+    &.menu-contract{
+        width: 110px;
+        height: 100%;
+        
+        // -webkit-transition: width 1000ms ease-in-out;
+        // -moz-transition: width 1000ms ease-in-out;
+        // -o-transition: width 1000ms ease-in-out;
+        // transition: width 1000ms ease-in-out;
+
+        .port{
+            position: relative;
+            height:80px;
+            
+            .me{
+                display: none;
+            }
+            // -webkit-transition: height 1000ms ease-in-out;
+            // -moz-transition: height 1000ms ease-in-out;
+            // -o-transition: height 1000ms ease-in-out;
+            // transition: height 1000ms ease-in-out;
+        }
+
+        .circle {
+            top: 50%;
+            height: 50px;
+            width: 50px;
+
+        }
+
+        .nav{
+            display:block;
+            .btn{
+                position: relative;
+                width: 100%;
+                height: 8%;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.10);
+                color: rgb(256,256,256);
+                color: rgba(256,256,256,0.60);
+                // -webkit-transition: background-color 200ms ease-out;
+                // -moz-transition: background-color 200ms ease-out;
+                // -o-transition: background-color 200ms ease-out;
+                // transition: background-color 200ms ease-out;
+
+                &:hover{
+                    background-color: rgb(0,0,0);
+                    background-color: rgba(0,0,0,0.30);
+                    font-weight: bold;
+                    color: rgb(256,256,256);
+                }
+
+                .icon {
+                    display: inline-block;
+                    position: absolute;
+                    top: 35%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -moz-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    width: 30%;
+                    height: 30%;
+                }
+                // TODO - remove 
+                .icon use {
+                    stroke: rgb(256,256,256);
+                    // stroke: rgba(256,256,256,0.60);
+                    fill: rgb(256,256,256);
+                    // fill: rgba(256,256,256,0.60);
+                }
+
+                a.navlink{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+
+                    p{
+                        display: inline-block;
+                        position: absolute;
+                        top: 75%;
+                        left: 50%;
+                        -webkit-transform: translate(-50%, -50%);
+                        -moz-transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                        font-size: 10%;
+                        letter-spacing: 3.75px;
+                    }
+                }
+            }
+        }
+
+        .social{
+            height:auto;
+            .btn{
+                position: relative;
+                width: 100%;
+                height: 6.6%;
+                background-color:transparent;
+                margin: 0;
+                // -webkit-transition: background-color 150ms ease-out;
+                // -moz-transition: background-color 150ms ease-out;
+                // -o-transition: background-color 150ms ease-out;
+                // transition: background-color 150ms ease-out;
+
+                &:hover{
+                    .icon{
+                        height:44%;
+                    }
+                }
+
+                .icon {
+                    width: 33%;
+                    height: 33%;
+                }
+            }
+        }
+
+        .bio{
+            display: none;
         }
     }
 }

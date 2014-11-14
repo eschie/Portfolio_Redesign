@@ -60,44 +60,90 @@ body {
 }
 
 .menu {
-  width: 110px;
+  width: 320px;
   height: 100%;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
   left: 0;
+  -webkit-transition: width 1000ms ease-in-out;
+  -moz-transition: width 1000ms ease-in-out;
+  -o-transition: width 1000ms ease-in-out;
+  transition: width 1000ms ease-in-out;
 }
 .menu .key {
+  display: block;
   width: 100%;
   height: 20px;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.3);
 }
 .menu .key p {
-  padding-top: 6%;
-  padding-bottom: 5%;
+  line-height: 20px;
   text-align: center;
-  font-size: 20%;
+  font-size: 10px;
   display: block;
   letter-spacing: 1px;
 }
 .menu .port {
   position: relative;
   width: 100%;
-  height: 80px;
+  height: 340px;
+  -webkit-transition: height 1000ms ease-in-out;
+  -moz-transition: height 1000ms ease-in-out;
+  -o-transition: height 1000ms ease-in-out;
+  transition: height 1000ms ease-in-out;
+}
+.menu .port .me {
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.menu .port .me .where {
+  padding-top: 10px;
+  text-align: center;
+}
+.menu .port .me .where .icon {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+.menu .port .me .where span {
+  font-size: .75em;
+  line-height: 1em;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+}
+.menu .port .me p {
+  padding: 7px 0;
+  text-align: center;
+  font-size: .75em;
+  line-height: 1em;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+}
+.menu .port .me p.job {
+  font-weight: bold;
+  color: #FDBCBC;
 }
 .menu .circle {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  height: 50px;
-  width: 50px;
+  height: 180px;
+  width: 180px;
   margin: 0 auto;
+  -webkit-transition: width 1000ms ease-in-out, height 1000ms ease-in-out, top 1000ms ease-in-out;
+  -moz-transition: width 1000ms ease-in-out, height 1000ms ease-in-out, top 1000ms ease-in-out;
+  -o-transition: width 1000ms ease-in-out, height 1000ms ease-in-out, top 1000ms ease-in-out;
+  transition: width 1000ms ease-in-out, height 1000ms ease-in-out, top 1000ms ease-in-out;
 }
 .menu .circle:before, .menu .circle:after {
   content: "";
@@ -141,67 +187,32 @@ body {
   -webkit-border-radius: 100;
   border-radius: 100;
 }
-.menu .nav .btn {
-  position: relative;
-  width: 100%;
-  height: 8%;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.1);
-  color: white;
-  color: rgba(255, 255, 255, 0.6);
-  -webkit-transition: background-color 200ms ease-out;
-  -moz-transition: background-color 200ms ease-out;
-  -o-transition: background-color 200ms ease-out;
-  transition: background-color 200ms ease-out;
+.menu .nav {
+  display: none;
 }
-.menu .nav .btn:hover {
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.3);
-  font-weight: bold;
-  color: white;
-}
-.menu .nav .btn .icon {
-  display: inline-block;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 30%;
-  height: 30%;
-}
-.menu .nav .btn .icon use {
-  stroke: white;
-  fill: white;
-}
-.menu .nav .btn a.navlink {
+.menu .social {
   display: block;
-  width: 100%;
-  height: 100%;
-}
-.menu .nav .btn a.navlink p {
-  display: inline-block;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: 10%;
-  letter-spacing: 3.75px;
+  width: 80%;
+  height: 120px;
+  margin: 0 auto;
 }
 .menu .social .btn {
   position: relative;
-  width: 100%;
-  height: 6.6%;
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin: 5px 7px;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50;
   -webkit-transition: background-color 150ms ease-out;
   -moz-transition: background-color 150ms ease-out;
   -o-transition: background-color 150ms ease-out;
   transition: background-color 150ms ease-out;
+}
+.menu .social .btn:hover {
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 .menu .social .btn:hover .icon {
   height: 44%;
@@ -218,23 +229,117 @@ body {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 33%;
-  height: 33%;
+  width: 100%;
+  height: 40%;
   -webkit-transition: height 100ms ease-out;
   -moz-transition: height 100ms ease-out;
   -o-transition: height 100ms ease-out;
   transition: height 100ms ease-out;
 }
-.menu .social .btn .icon use {
-  stroke: white;
-  stroke: rgba(255, 255, 255, 0.6);
-  fill: white;
-  fill: rgba(255, 255, 255, 0.6);
-}
 .menu .social .btn a.soclink {
   display: block;
   width: 100%;
   height: 100%;
+}
+.menu .bio {
+  width: 70%;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.menu .bio p {
+  font-size: .9em;
+  line-height: 1.25em;
+  letter-spacing: 1px;
+}
+.menu.menu-contract {
+  width: 110px;
+  height: 100%;
+}
+.menu.menu-contract .port {
+  position: relative;
+  height: 80px;
+}
+.menu.menu-contract .port .me {
+  display: none;
+}
+.menu.menu-contract .circle {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+}
+.menu.menu-contract .nav {
+  display: block;
+}
+.menu.menu-contract .nav .btn {
+  position: relative;
+  width: 100%;
+  height: 8%;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  color: rgba(255, 255, 255, 0.6);
+}
+.menu.menu-contract .nav .btn:hover {
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  color: white;
+}
+.menu.menu-contract .nav .btn .icon {
+  display: inline-block;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+}
+.menu.menu-contract .nav .btn .icon use {
+  stroke: white;
+  fill: white;
+}
+.menu.menu-contract .nav .btn a.navlink {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.menu.menu-contract .nav .btn a.navlink p {
+  display: inline-block;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 10%;
+  letter-spacing: 3.75px;
+}
+.menu.menu-contract .social {
+  height: auto;
+}
+.menu.menu-contract .social .btn {
+  position: relative;
+  width: 100%;
+  height: 6.6%;
+  background-color: transparent;
+  margin: 0;
+}
+.menu.menu-contract .social .btn:hover .icon {
+  height: 44%;
+}
+.menu.menu-contract .social .btn .icon {
+  width: 33%;
+  height: 33%;
+}
+.menu.menu-contract .bio {
+  display: none;
 }
 
 .iconfill {
@@ -251,11 +356,18 @@ body {
 }
 
 .content-container {
-  margin-left: 110px;
+  margin-left: 320px;
   width: auto;
   height: 100%;
   position: relative;
   overflow: auto;
+  -webkit-transition: margin-left 1000ms ease-in-out;
+  -moz-transition: margin-left 1000ms ease-in-out;
+  -o-transition: margin-left 1000ms ease-in-out;
+  transition: margin-left 1000ms ease-in-out;
+}
+.content-container.content-container-contract {
+  margin-left: 110px;
 }
 
 .box-container {
@@ -266,10 +378,6 @@ body {
 }
 .box-container.panel-expanded > section:not(.box-panel-expand) {
   opacity: 0;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
 }
 .box-container > section:first-child {
   top: 0;
