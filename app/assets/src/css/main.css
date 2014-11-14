@@ -324,6 +324,9 @@ body {
   font-weight: bold;
   color: white;
 }
+.box-container section .box-panel-overlay:hover .pagelink p {
+  opacity: 1;
+}
 .box-container section .box-panel-overlay:hover .icon {
   height: 45%;
 }
@@ -355,6 +358,7 @@ body {
   height: 100%;
 }
 .box-container section .box-panel-overlay div.pagelink p {
+  opacity: 0;
   display: inline-block;
   position: absolute;
   top: 75%;
@@ -369,6 +373,10 @@ body {
   font-weight: bold;
   color: white;
   color: rgba(255, 255, 255, 0.6);
+  -webkit-transition: opacity 300ms linear;
+  -moz-transition: opacity 300ms linear;
+  -o-transition: opacity 300ms linear;
+  transition: opacity 300ms linear;
 }
 .box-container section .box-panel-content {
   opacity: 0;
