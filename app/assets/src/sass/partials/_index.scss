@@ -66,7 +66,7 @@
                 color: rgb(256,256,256);
                 
                 .pagelink p{
-                    font-size: 125%;
+                    // font-size: 110%;
                 }
                 .icon{
                     height:45%;
@@ -83,10 +83,10 @@
                 height: 35%;
                 
                 // Transition: Icon Height on hover
-                -webkit-transition: height 200ms ease-out;
-                -moz-transition: height 200ms ease-out;
-                -o-transition: height 200ms ease-out;
-                transition: height 200ms ease-out;
+                -webkit-transition: height 300ms ease-in-out;
+                -moz-transition: height 300ms ease-in-out;
+                -o-transition: height 300ms ease-in-out;
+                transition: height 300ms ease-in-out;
             }
 
             .icon use {
@@ -114,17 +114,17 @@
                     left: 50%;
                     transform: translate(-50%, -50%);
                     text-align: center;
-                    font-size: 100%;
+                    font-size: 150%;
                     letter-spacing: .75em;
                     font-weight: bold;
                     color: rgb(256,256,256);
                     color: rgba(256,256,256,0.60);
                     
                     // Transition: fontsize on hover
-                    -webkit-transition: font-size 200ms ease-out;
-                    -moz-transition: font-size 200ms ease-out;
-                    -o-transition: font-size 200ms ease-out;
-                    transition: font-size 200ms ease-out;
+                    // -webkit-transition: font-size 200ms linear;
+                    // -moz-transition: font-size 200ms linear;
+                    // -o-transition: font-size 200ms linear;
+                    // transition: font-size 200ms linear;
                 }
             }
         }

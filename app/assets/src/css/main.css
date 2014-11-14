@@ -312,9 +312,6 @@ body {
   font-weight: bold;
   color: white;
 }
-.box-container section .box-panel-overlay:hover .pagelink p {
-  font-size: 125%;
-}
 .box-container section .box-panel-overlay:hover .icon {
   height: 45%;
 }
@@ -326,10 +323,10 @@ body {
   transform: translate(-50%, -50%);
   width: 35%;
   height: 35%;
-  -webkit-transition: height 200ms ease-out;
-  -moz-transition: height 200ms ease-out;
-  -o-transition: height 200ms ease-out;
-  transition: height 200ms ease-out;
+  -webkit-transition: height 300ms ease-in-out;
+  -moz-transition: height 300ms ease-in-out;
+  -o-transition: height 300ms ease-in-out;
+  transition: height 300ms ease-in-out;
 }
 .box-container section .box-panel-overlay .icon use {
   stroke: white;
@@ -349,15 +346,11 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 100%;
+  font-size: 150%;
   letter-spacing: .75em;
   font-weight: bold;
   color: white;
   color: rgba(255, 255, 255, 0.6);
-  -webkit-transition: font-size 200ms ease-out;
-  -moz-transition: font-size 200ms ease-out;
-  -o-transition: font-size 200ms ease-out;
-  transition: font-size 200ms ease-out;
 }
 .box-container section .box-panel-content {
   opacity: 0;
