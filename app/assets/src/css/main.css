@@ -67,10 +67,10 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  -webkit-transition: width 1000ms ease-in-out;
-  -moz-transition: width 1000ms ease-in-out;
-  -o-transition: width 1000ms ease-in-out;
-  transition: width 1000ms ease-in-out;
+  -webkit-transition: width 500ms ease-in-out;
+  -moz-transition: width 500ms ease-in-out;
+  -o-transition: width 500ms ease-in-out;
+  transition: width 500ms ease-in-out;
 }
 .menu .key {
   display: block;
@@ -90,17 +90,22 @@ body {
   position: relative;
   width: 100%;
   height: 340px;
-  -webkit-transition: height 1000ms ease-in-out;
-  -moz-transition: height 1000ms ease-in-out;
-  -o-transition: height 1000ms ease-in-out;
-  transition: height 1000ms ease-in-out;
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
 }
 .menu .port .me {
+  opacity: 1;
   position: absolute;
   top: 70%;
   width: 100%;
   display: block;
   margin: 0 auto;
+  -webkit-transition: all 500ms ease-in-out 500ms;
+  -moz-transition: all 500ms ease-in-out 500ms;
+  -o-transition: all 500ms ease-in-out 500ms;
+  transition: all 500ms ease-in-out 500ms;
 }
 .menu .port .me .where {
   padding-top: 10px;
@@ -131,7 +136,7 @@ body {
 }
 .menu .circle {
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -140,10 +145,10 @@ body {
   height: 180px;
   width: 180px;
   margin: 0 auto;
-  -webkit-transition: width 1000ms ease-in-out, height 1000ms ease-in-out, top 1000ms ease-in-out;
-  -moz-transition: width 1000ms ease-in-out, height 1000ms ease-in-out, top 1000ms ease-in-out;
-  -o-transition: width 1000ms ease-in-out, height 1000ms ease-in-out, top 1000ms ease-in-out;
-  transition: width 1000ms ease-in-out, height 1000ms ease-in-out, top 1000ms ease-in-out;
+  -webkit-transition: width 500ms ease-in-out, height 500ms ease-in-out, top 500ms ease-in-out;
+  -moz-transition: width 500ms ease-in-out, height 500ms ease-in-out, top 500ms ease-in-out;
+  -o-transition: width 500ms ease-in-out, height 500ms ease-in-out, top 500ms ease-in-out;
+  transition: width 500ms ease-in-out, height 500ms ease-in-out, top 500ms ease-in-out;
 }
 .menu .circle:before, .menu .circle:after {
   content: "";
@@ -188,7 +193,16 @@ body {
   border-radius: 100;
 }
 .menu .nav {
-  display: none;
+  height: 0;
+  opacity: 0;
+}
+.menu .nav .btn {
+  height: 0;
+  opacity: 0;
+}
+.menu .nav .btn p, .menu .nav .btn .icon {
+  height: 0;
+  opacity: 0;
 }
 .menu .social {
   display: block;
@@ -205,10 +219,10 @@ body {
   background-color: black;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50;
-  -webkit-transition: background-color 150ms ease-out;
-  -moz-transition: background-color 150ms ease-out;
-  -o-transition: background-color 150ms ease-out;
-  transition: background-color 150ms ease-out;
+  -webkit-transition: height 500ms ease-in-out 500ms, margin 500ms ease-in-out 500ms, background-color 100ms ease-in-out, border-radius 100ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out 500ms, margin 500ms ease-in-out 500ms, background-color 100ms ease-in-out, border-radius 100ms ease-in-out;
+  -o-transition: height 500ms ease-in-out 500ms, margin 500ms ease-in-out 500ms, background-color 100ms ease-in-out, border-radius 100ms ease-in-out;
+  transition: height 500ms ease-in-out 500ms, margin 500ms ease-in-out 500ms, background-color 100ms ease-in-out, border-radius 100ms ease-in-out;
 }
 .menu .social .btn:hover {
   background-color: black;
@@ -243,10 +257,16 @@ body {
 }
 .menu .bio {
   width: 70%;
+  height: 15%;
   margin: 10px auto;
   padding: 20px;
   background-color: white;
   background-color: rgba(255, 255, 255, 0.1);
+  opacity: 1;
+  -webkit-transition: all 500ms ease-in-out 500ms;
+  -moz-transition: all 500ms ease-in-out 500ms;
+  -o-transition: all 500ms ease-in-out 500ms;
+  transition: all 500ms ease-in-out 500ms;
 }
 .menu .bio p {
   font-size: .9em;
@@ -262,7 +282,11 @@ body {
   height: 80px;
 }
 .menu.menu-contract .port .me {
-  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in-out;
+  -moz-transition: opacity 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 .menu.menu-contract .circle {
   top: 50%;
@@ -271,8 +295,15 @@ body {
 }
 .menu.menu-contract .nav {
   display: block;
+  opacity: 1;
+  height: auto;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 .menu.menu-contract .nav .btn {
+  opacity: 1;
   position: relative;
   width: 100%;
   height: 8%;
@@ -288,6 +319,7 @@ body {
   color: white;
 }
 .menu.menu-contract .nav .btn .icon {
+  opacity: 1;
   display: inline-block;
   position: absolute;
   top: 35%;
@@ -309,6 +341,7 @@ body {
   height: 100%;
 }
 .menu.menu-contract .nav .btn a.navlink p {
+  opacity: 1;
   display: inline-block;
   position: absolute;
   top: 75%;
@@ -325,7 +358,6 @@ body {
   height: auto;
 }
 .menu.menu-contract .social .btn {
-  position: relative;
   width: 100%;
   height: 6.6%;
   background-color: transparent;
@@ -339,7 +371,10 @@ body {
   height: 33%;
 }
 .menu.menu-contract .bio {
-  display: none;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  height: 0;
 }
 
 .iconfill {
@@ -361,10 +396,10 @@ body {
   height: 100%;
   position: relative;
   overflow: auto;
-  -webkit-transition: margin-left 1000ms ease-in-out;
-  -moz-transition: margin-left 1000ms ease-in-out;
-  -o-transition: margin-left 1000ms ease-in-out;
-  transition: margin-left 1000ms ease-in-out;
+  -webkit-transition: margin-left 500ms ease-in-out;
+  -moz-transition: margin-left 500ms ease-in-out;
+  -o-transition: margin-left 500ms ease-in-out;
+  transition: margin-left 500ms ease-in-out;
 }
 .content-container.content-container-contract {
   margin-left: 110px;
@@ -406,10 +441,10 @@ body {
   box-sizing: border-box;
   border: 1px solid white;
   border: 1px solid rgba(255, 255, 255, 0);
-  -webkit-transition: all 1000ms ease-in-out;
-  -moz-transition: all 1000ms ease-in-out;
-  -o-transition: all 1000ms ease-in-out;
-  transition: all 1000ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 .box-container section.box-panel-expand-top {
   z-index: 100;
@@ -421,10 +456,10 @@ body {
   text-align: center;
   position: relative;
   opacity: 1;
-  -webkit-transition: background-color 300ms ease-out, opacity 1200ms ease-in;
-  -moz-transition: background-color 300ms ease-out, opacity 1200ms ease-in;
-  -o-transition: background-color 300ms ease-out, opacity 1200ms ease-in;
-  transition: background-color 300ms ease-out, opacity 1200ms ease-in;
+  -webkit-transition: background-color 300ms ease-out, opacity 500ms ease-in;
+  -moz-transition: background-color 300ms ease-out, opacity 500ms ease-in;
+  -o-transition: background-color 300ms ease-out, opacity 500ms ease-in;
+  transition: background-color 300ms ease-out, opacity 500ms ease-in;
 }
 .box-container section .box-panel-overlay:hover {
   background-color: black;
@@ -498,10 +533,10 @@ body {
   overflow-y: auto;
 }
 .box-container section .box-panel-content, .box-container section .box-panel-close {
-  -webkit-transition: opacity 1000ms ease-in-out;
-  -moz-transition: opacity 1000ms ease-in-out;
-  -o-transition: opacity 1000ms ease-in-out;
-  transition: opacity 1000ms ease-in-out;
+  -webkit-transition: opacity 500ms ease-in-out;
+  -moz-transition: opacity 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 .box-container section span.box-panel-close {
   display: block;
@@ -527,18 +562,18 @@ body {
 }
 .box-container section.box-panel-expand .box-panel-overlay {
   opacity: 0;
-  -webkit-transition: opacity 1000ms ease-out;
-  -moz-transition: opacity 1000ms ease-out;
-  -o-transition: opacity 1000ms ease-out;
-  transition: opacity 1000ms ease-out;
+  -webkit-transition: opacity 500ms ease-out;
+  -moz-transition: opacity 500ms ease-out;
+  -o-transition: opacity 500ms ease-out;
+  transition: opacity 500ms ease-out;
 }
 .box-container section.box-panel-expand .box-panel-content, .box-container section.box-panel-expand .box-panel-close {
   pointer-events: auto;
   opacity: 1;
-  -webkit-transition: opacity 1000ms ease-in-out;
-  -moz-transition: opacity 1000ms ease-in-out;
-  -o-transition: opacity 1000ms ease-in-out;
-  transition: opacity 1000ms ease-in-out;
+  -webkit-transition: opacity 500ms ease-in-out 1000ms;
+  -moz-transition: opacity 500ms ease-in-out 1000ms;
+  -o-transition: opacity 500ms ease-in-out 1000ms;
+  transition: opacity 500ms ease-in-out 1000ms;
 }
 
 .work-container {

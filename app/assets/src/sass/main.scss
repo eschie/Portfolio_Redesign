@@ -10,7 +10,9 @@ $color_riptide_approx: rgb(139, 229, 235);
 $color_mauve_approx: rgb(233, 186, 249);
 $color_shilo_approx: rgb(241, 176, 176);
 
-$contract-amount: 320px ;
+$master-animation-time: 500ms;
+$extend-amount: 320px ;
+$contract-amount: 110px ;
 
 body {
     background-color: $color_prelude_approx;
@@ -38,19 +40,19 @@ body {
 }
 
 .content-container {
-    margin-left: $contract-amount;
+    margin-left: $extend-amount;
     width:auto;
     height:100%;
     position: relative;
     overflow: auto;
 
-    -webkit-transition: margin-left 1000ms ease-in-out;
-    -moz-transition: margin-left 1000ms ease-in-out;
-    -o-transition: margin-left 1000ms ease-in-out;
-    transition: margin-left 1000ms ease-in-out;
+    -webkit-transition: margin-left $master-animation-time ease-in-out;
+    -moz-transition: margin-left $master-animation-time ease-in-out;
+    -o-transition: margin-left $master-animation-time ease-in-out;
+    transition: margin-left $master-animation-time ease-in-out;
 
     &.content-container-contract{
-        margin-left: 110px;
+        margin-left: $contract-amount;
     }
 }
 
