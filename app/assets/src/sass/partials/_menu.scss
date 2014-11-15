@@ -148,12 +148,26 @@
     .nav{
         height:0;
         opacity:0;
+        width: 100%;
+
+        -webkit-transition: all $master-animation-time ease-in-out;
+        -moz-transition: all $master-animation-time ease-in-out;
+        -o-transition: all $master-animation-time ease-in-out;
+        transition: all $master-animation-time ease-in-out;
+
         .btn{
+            width: 100%;
             height:0;
             opacity:0;
-            p,.icon{
+            background-color: transparent;
+
+            a.navlink{
                 height:0;
                 opacity:0;
+                .icon,p{
+                    height:0;
+                    opacity:0;
+                }
             }
         }
     }
@@ -163,6 +177,16 @@
         width: 80%;
         height: 120px;
         margin: 0 auto;
+
+        -webkit-transition: all $master-animation-time ease-in-out $master-animation-time;
+        -moz-transition: all $master-animation-time ease-in-out $master-animation-time;
+        -o-transition: all $master-animation-time ease-in-out $master-animation-time;
+        transition: all $master-animation-time ease-in-out $master-animation-time;
+
+        // -webkit-transition: height $master-animation-time ease-in-out $master-animation-time, margin $master-animation-time ease-in-out $master-animation-time, border-radius 100ms ease-in-out $master-animation-time;
+        // -moz-transition: height $master-animation-time ease-in-out $master-animation-time, margin $master-animation-time ease-in-out $master-animation-time, border-radius 100ms ease-in-out $master-animation-time;
+        // -o-transition: height $master-animation-time ease-in-out $master-animation-time, margin $master-animation-time ease-in-out $master-animation-time, border-radius 100ms ease-in-out $master-animation-time;
+        // transition: height $master-animation-time ease-in-out $master-animation-time, margin $master-animation-time ease-in-out $master-animation-time, border-radius 100ms ease-in-out $master-animation-time;
 
         .btn{
             position: relative;
@@ -174,10 +198,7 @@
             background-color:rgba(0,0,0,0.30);
             border-radius:50;
 
-            -webkit-transition: height $master-animation-time ease-in-out $master-animation-time, margin $master-animation-time ease-in-out $master-animation-time, background-color 100ms ease-in-out, border-radius 100ms ease-in-out;
-            -moz-transition: height $master-animation-time ease-in-out $master-animation-time, margin $master-animation-time ease-in-out $master-animation-time, background-color 100ms ease-in-out, border-radius 100ms ease-in-out;
-            -o-transition: height $master-animation-time ease-in-out $master-animation-time, margin $master-animation-time ease-in-out $master-animation-time, background-color 100ms ease-in-out, border-radius 100ms ease-in-out;
-            transition: height $master-animation-time ease-in-out $master-animation-time, margin $master-animation-time ease-in-out $master-animation-time, background-color 100ms ease-in-out, border-radius 100ms ease-in-out;
+
 
 
             &:hover{
@@ -239,12 +260,13 @@
         background-color: rgba(256,256,256,0.10);
         opacity: 1;
 
-        -webkit-transition: all $master-animation-time ease-in-out $master-animation-time;
-        -moz-transition: all $master-animation-time ease-in-out $master-animation-time;
-        -o-transition: all $master-animation-time ease-in-out $master-animation-time;
-        transition: all $master-animation-time ease-in-out $master-animation-time;
+        -webkit-transition: all 300ms ease-in-out $master-animation-time;
+        -moz-transition: all 300ms ease-in-out $master-animation-time;
+        -o-transition: all 300ms ease-in-out $master-animation-time;
+        transition: all 300ms ease-in-out $master-animation-time;
 
         p{
+            opacity:1;
             font-size:.9em;
             line-height: 1.25em;
             letter-spacing: 1px;
@@ -289,26 +311,21 @@
         }
 
         .nav{
-            display:block;
             opacity: 1;
-            height:auto;
-            -webkit-transition: all $master-animation-time ease-in-out;
-            -moz-transition: all $master-animation-time ease-in-out;
-            -o-transition: all $master-animation-time ease-in-out;
-            transition: all $master-animation-time ease-in-out;
+            height:32%;
+
             .btn{
                 opacity: 1;
                 position: relative;
-                width: 100%;
-                height: 8%;
+                height: 25%;
                 background-color: rgb(0,0,0);
                 background-color: rgba(0,0,0,0.10);
                 color: rgb(256,256,256);
                 color: rgba(256,256,256,0.60);
-                // -webkit-transition: background-color 200ms ease-out;
-                // -moz-transition: background-color 200ms ease-out;
-                // -o-transition: background-color 200ms ease-out;
-                // transition: background-color 200ms ease-out;
+                -webkit-transition: background-color 300ms ease-out;
+                -moz-transition: background-color 300ms ease-out;
+                -o-transition: background-color 300ms ease-out;
+                transition: background-color 300ms ease-out;
 
                 &:hover{
                     background-color: rgb(0,0,0);
@@ -317,31 +334,33 @@
                     color: rgb(256,256,256);
                 }
 
-                .icon {
-                    opacity: 1;
-                    display: inline-block;
-                    position: absolute;
-                    top: 35%;
-                    left: 50%;
-                    -webkit-transform: translate(-50%, -50%);
-                    -moz-transform: translate(-50%, -50%);
-                    -ms-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
-                    width: 30%;
-                    height: 30%;
-                }
-                // TODO - remove 
-                .icon use {
-                    stroke: rgb(256,256,256);
-                    // stroke: rgba(256,256,256,0.60);
-                    fill: rgb(256,256,256);
-                    // fill: rgba(256,256,256,0.60);
-                }
-
                 a.navlink{
+                    opacity:1;
                     display: block;
                     width: 100%;
                     height: 100%;
+
+                    .icon {
+                        opacity: 1;
+                        display: inline-block;
+                        position: absolute;
+                        top: 35%;
+                        left: 50%;
+                        -webkit-transform: translate(-50%, -50%);
+                        -moz-transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                        width: 30%;
+                        height: 30%;
+                    }
+                    // TODO - remove 
+                    .icon use {
+                        opacity:1;
+                        stroke: rgb(256,256,256);
+                        // stroke: rgba(256,256,256,0.60);
+                        fill: rgb(256,256,256);
+                        // fill: rgba(256,256,256,0.60);
+                    }
 
                     p{
                         opacity: 1;
@@ -385,8 +404,16 @@
         .bio{
             opacity: 0;
             padding: 0;
-            margin: 0;
+            margin: 0 auto;
             height:0;
+            background-color: transparent;
+            -webkit-transform: scale(0);
+            -moz-transform: scale(0);
+            -ms-transform: scale(0);
+            transform: scale(0);
+            p{
+                opacity:0;
+            }
         }
     }
 }

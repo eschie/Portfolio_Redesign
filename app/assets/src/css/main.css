@@ -195,12 +195,23 @@ body {
 .menu .nav {
   height: 0;
   opacity: 0;
+  width: 100%;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 .menu .nav .btn {
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  background-color: transparent;
+}
+.menu .nav .btn a.navlink {
   height: 0;
   opacity: 0;
 }
-.menu .nav .btn p, .menu .nav .btn .icon {
+.menu .nav .btn a.navlink .icon, .menu .nav .btn a.navlink p {
   height: 0;
   opacity: 0;
 }
@@ -209,6 +220,10 @@ body {
   width: 80%;
   height: 120px;
   margin: 0 auto;
+  -webkit-transition: all 500ms ease-in-out 500ms;
+  -moz-transition: all 500ms ease-in-out 500ms;
+  -o-transition: all 500ms ease-in-out 500ms;
+  transition: all 500ms ease-in-out 500ms;
 }
 .menu .social .btn {
   position: relative;
@@ -219,10 +234,6 @@ body {
   background-color: black;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50;
-  -webkit-transition: height 500ms ease-in-out 500ms, margin 500ms ease-in-out 500ms, background-color 100ms ease-in-out, border-radius 100ms ease-in-out;
-  -moz-transition: height 500ms ease-in-out 500ms, margin 500ms ease-in-out 500ms, background-color 100ms ease-in-out, border-radius 100ms ease-in-out;
-  -o-transition: height 500ms ease-in-out 500ms, margin 500ms ease-in-out 500ms, background-color 100ms ease-in-out, border-radius 100ms ease-in-out;
-  transition: height 500ms ease-in-out 500ms, margin 500ms ease-in-out 500ms, background-color 100ms ease-in-out, border-radius 100ms ease-in-out;
 }
 .menu .social .btn:hover {
   background-color: black;
@@ -263,12 +274,13 @@ body {
   background-color: white;
   background-color: rgba(255, 255, 255, 0.1);
   opacity: 1;
-  -webkit-transition: all 500ms ease-in-out 500ms;
-  -moz-transition: all 500ms ease-in-out 500ms;
-  -o-transition: all 500ms ease-in-out 500ms;
-  transition: all 500ms ease-in-out 500ms;
+  -webkit-transition: all 300ms ease-in-out 500ms;
+  -moz-transition: all 300ms ease-in-out 500ms;
+  -o-transition: all 300ms ease-in-out 500ms;
+  transition: all 300ms ease-in-out 500ms;
 }
 .menu .bio p {
+  opacity: 1;
   font-size: .9em;
   line-height: 1.25em;
   letter-spacing: 1px;
@@ -294,23 +306,21 @@ body {
   width: 50px;
 }
 .menu.menu-contract .nav {
-  display: block;
   opacity: 1;
-  height: auto;
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
+  height: 32%;
 }
 .menu.menu-contract .nav .btn {
   opacity: 1;
   position: relative;
-  width: 100%;
-  height: 8%;
+  height: 25%;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.1);
   color: white;
   color: rgba(255, 255, 255, 0.6);
+  -webkit-transition: background-color 300ms ease-out;
+  -moz-transition: background-color 300ms ease-out;
+  -o-transition: background-color 300ms ease-out;
+  transition: background-color 300ms ease-out;
 }
 .menu.menu-contract .nav .btn:hover {
   background-color: black;
@@ -318,7 +328,13 @@ body {
   font-weight: bold;
   color: white;
 }
-.menu.menu-contract .nav .btn .icon {
+.menu.menu-contract .nav .btn a.navlink {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.menu.menu-contract .nav .btn a.navlink .icon {
   opacity: 1;
   display: inline-block;
   position: absolute;
@@ -331,14 +347,10 @@ body {
   width: 30%;
   height: 30%;
 }
-.menu.menu-contract .nav .btn .icon use {
+.menu.menu-contract .nav .btn a.navlink .icon use {
+  opacity: 1;
   stroke: white;
   fill: white;
-}
-.menu.menu-contract .nav .btn a.navlink {
-  display: block;
-  width: 100%;
-  height: 100%;
 }
 .menu.menu-contract .nav .btn a.navlink p {
   opacity: 1;
@@ -373,8 +385,16 @@ body {
 .menu.menu-contract .bio {
   opacity: 0;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   height: 0;
+  background-color: transparent;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+.menu.menu-contract .bio p {
+  opacity: 0;
 }
 
 .iconfill {
@@ -662,6 +682,7 @@ body {
   color: #ffbebe;
 }
 .work-container .description {
+  font-style: italic;
   font-size: .9em;
   line-height: 1.25em;
   letter-spacing: 1px;
