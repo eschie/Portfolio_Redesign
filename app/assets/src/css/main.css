@@ -322,7 +322,7 @@ body {
   -o-transition: background-color 300ms ease-out;
   transition: background-color 300ms ease-out;
 }
-.menu.menu-contract .nav .btn:hover {
+.menu.menu-contract .nav .btn.active, .menu.menu-contract .nav .btn:hover {
   background-color: black;
   background-color: rgba(0, 0, 0, 0.3);
   font-weight: bold;
