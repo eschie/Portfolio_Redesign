@@ -803,4 +803,107 @@ ul.portfolio-list li.portfolio-content-container .project-bottom-container .view
   padding: 10px;
 }
 
+form {
+  font-family: 'PT Sans', Arial;
+  width: 50%;
+  padding: 30px;
+  margin: 0 auto;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: black;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  color: white;
+}
+form h2 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 1.25em;
+}
+form textarea {
+  color: white;
+  font-family: 'PT Sans', Arial;
+  width: 80%;
+  height: 110px;
+  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: white;
+  background: rgba(255, 255, 255, 0.4);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  display: block;
+  font-size: 18px;
+  padding-left: 45px;
+  padding-right: 20px;
+  padding-top: 12px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+form input {
+  color: white;
+  font-family: 'PT Sans', Arial;
+  width: 80%;
+  height: 48px;
+  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  display: block;
+  font-size: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 20px auto;
+}
+form input[type=submit] {
+  cursor: pointer;
+}
+form input.name, form input.email, form input.message {
+  background: white;
+  background: rgba(255, 255, 255, 0.4);
+  padding-left: 45px;
+}
+form input:focus, form textarea:focus {
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 5px 1px white;
+  box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+}
+form .subbtn {
+  width: 80%;
+  height: 44px;
+  border: none;
+  margin: 0 auto;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10.5px 21px;
+  text-shadow: #333333 0 1px 0;
+  font-weight: bold;
+  color: white;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+}
+form .subbtn:hover {
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-shadow: #333333 0 1px 0;
+  color: #e1e1e1;
+}
+form .subbtn:active {
+  background-color: white;
+  text-shadow: #333333 0 -1px 0;
+}
+
 /*# sourceMappingURL=main.css.map */

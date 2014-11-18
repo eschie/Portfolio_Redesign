@@ -1,0 +1,113 @@
+form {
+    font-family: 'PT Sans', Arial;
+    width: 50%;
+    padding:30px;
+    margin: 0 auto;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.5); 
+    overflow: hidden; 
+    color:white;
+
+    h2{
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 3.5px;
+        font-weight: bold;
+        font-size:1.5em;
+        line-height: 1.25em;
+    }
+
+    textarea{
+        color: white;
+        font-family: 'PT Sans', Arial;
+        width: 80%;
+        height: 110px;
+        border: 1px solid rgb(255,255,255);
+        border: 1px solid rgba(255,255,255,.6);
+        background: rgb(255, 255, 255); 
+        background: rgba(255, 255, 255, 0.4); 
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        display:block;
+        font-size:18px;
+        padding-left:45px;
+        padding-right:20px;
+        padding-top:12px;
+        margin:20px auto;
+        overflow:hidden;
+    }
+
+    input {
+        color: white;
+        font-family: 'PT Sans', Arial;
+        width: 80%;
+        height: 48px;
+        border: 1px solid rgb(255,255,255);
+        border: 1px solid rgba(255,255,255,.4);
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        display:block;
+        font-size:18px;
+        padding-left:20px;
+        padding-right:20px;
+        margin:20px auto;
+
+        &[type=submit] {
+            cursor:pointer;
+        }
+
+        &.name,&.email,&.message {
+            background: rgb(255, 255, 255); 
+            background: rgba(255, 255, 255, 0.4); 
+            padding-left:45px;
+        }
+
+    }
+
+    input:focus, textarea:focus { 
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+        -webkit-box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+        box-shadow: 0 0 5px 1px rgb(255,255,255);
+        box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+        overflow: hidden; 
+    }
+
+    .subbtn {
+        width: 80%;
+        height: 44px;
+        border: none;
+        margin: 0 auto;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background-color:rgb(0,0,0);
+        background-color:rgba(0,0,0,0.10);
+        padding: 10.5px 21px;
+        text-shadow: #333333 0 1px 0;
+        font-weight: bold;
+        color: rgb(256,256,256);
+        color: rgba(256,256,256,0.5);
+        text-transform: uppercase;
+        letter-spacing: 3.5px;
+
+        &:hover {
+            background-color:rgb(0,0,0);
+            background-color:rgba(0,0,0,0.40);
+            text-shadow: #333333 0 1px 0;
+            color: #e1e1e1;
+         }
+
+        &:active {
+            background-color:white;
+            text-shadow: #333333 0 -1px 0;
+       }
+    }
+}
+
