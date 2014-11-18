@@ -1,5 +1,26 @@
 <div class="portfolio-container">
-        {{#each portfolio.projects }}
-            <h1>{{this.name}}</h1>
-        {{/each}}
+    <h2>Portfolio</h2>
+    <ul class="portfolio-list">
+    {{#each portfolio.projects }}
+    <li class="portfolio-content-container">
+        <div class="project-top-container">
+            <div class="img-container">
+                <a class="coverlink" href="{{this.url}}" target="_blank"></a>
+                <img class="cover" src="{{this.covers.[404]}}" alt="">
+            </div>            
+            <a href="{{this.url}}" target="_blank"><span class="name">{{this.name}}</span></a>
+        </div>
+        <div class="project-bottom-container">
+            <svg class='icon'>
+                <use xlink:href='#icon-Icon-Views'/>
+            </svg>
+            <span class="views">{{this.stats.views}}</span>
+            <svg class='icon'>
+                <use xlink:href='#icon-Icon-Like'/>
+            </svg>
+            <span class="appreciations">{{this.stats.appreciations}}</span>
+        </div>
+    </li>
+    {{/each}}
+    </ul>
 </div>
