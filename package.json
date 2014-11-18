@@ -46,6 +46,7 @@
     "grunt-svgmin": "^1.0.0",
     "grunt-svgstore": "^0.4.1",
     "matchdep": "latest",
+    "request": "^2.48.0",
     "requirejs": "^2.1.11"
   }
 }

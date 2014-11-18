@@ -12,7 +12,9 @@ var cookieParser = require('cookie-parser'),
     MongoClient = require('mongodb').MongoClient,
     mongoose = require('mongoose'),
     assert = require('assert'),
-    data = require('./data.json');
+    data = require('./data.json'),
+    request = require('request'),
+    portfolio = {};
 
 app.set('title','Eschie.info');
 app.set('showStackError', true);
@@ -49,6 +51,27 @@ var assets = assetmanager.process({
 //     data: require('./data.json'),
 //     debug: process.env.NODE_ENV !== 'production'
 // });
+
+app.use(function(req, res, next) {
+    var apiKey = "HAUDXxkm0QycI3YE6Ejj1hoVKyZXSywh",
+        user = "eschie",
+        endpoint = "https://www.behance.net/v2/users/"+user+"/projects?api_key=";
+    url = endpoint+apiKey+"&callback=?";
+    if (!portfolio.length){
+        request.get({url:url,json:true},function(error, response, body){
+            if (!error && response.statusCode == 200){
+                portfolio = JSON.parse(body.toString().slice(6,-2));
+                res.locals.portfolio = portfolio;
+                next();
+            } else{
+                next();
+            }
+        });
+    } else {
+        res.locals.portfolio = portfolio;
+        next();
+    }
+});
 
 app.use(function(req, res, next) {
     res.locals.assets = assets;
