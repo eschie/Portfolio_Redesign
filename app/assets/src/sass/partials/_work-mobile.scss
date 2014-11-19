@@ -1,0 +1,19 @@
+@include breakpoint(mobile) {
+    left:0;
+    width:auto;
+    padding: 15px 30px 20px 20px;
+
+    .work-content{
+
+    }
+
+    h2{
+        font-size:1.5em;
+    }
+
+    .title{
+        .employer,.institution{
+            display:inline-block;
+        }
+    }
+}

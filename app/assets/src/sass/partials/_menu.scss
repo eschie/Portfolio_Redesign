@@ -2,7 +2,7 @@
     width: $extend-amount;
     height: 100%;
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.70);
+    background-color: rgba(0,0,0,0.50);
     position: fixed;
     top:0;
     left:0;
@@ -50,15 +50,17 @@
             -moz-transition: all $master-animation-time ease-in-out $master-animation-time;
             -o-transition: all $master-animation-time ease-in-out $master-animation-time;
             transition: all $master-animation-time ease-in-out $master-animation-time;
+
             .where{
-                padding-top: 10px;
+                padding-top: 5px;
                 text-align: center;
                 
                 .icon{
                     vertical-align: middle;
-                    width: 30px;
-                    height: 30px;
+                    width: 20px;
+                    height: 20px;
                 }
+                
                 span{
                     font-size: .75em;
                     line-height: 1em;
@@ -66,6 +68,7 @@
                     text-transform: uppercase;
                 }
             }
+
             p{
                 padding: 7px 0;
                 text-align: center;
@@ -73,6 +76,7 @@
                 line-height: 1em;
                 letter-spacing: 3.5px;
                 text-transform: uppercase;
+
                 &.job{
                     font-weight: bold;
                     color: #FDBCBC;
@@ -118,6 +122,7 @@
             border-radius: 100;
             z-index: 1;
         }
+
         &:after {
             top: 0;
             left: 0;
@@ -164,6 +169,7 @@
             a.navlink{
                 height:0;
                 opacity:0;
+
                 .icon,p{
                     height:0;
                     opacity:0;
@@ -183,11 +189,6 @@
         -o-transition: all $master-animation-time ease-in-out $master-animation-time;
         transition: all $master-animation-time ease-in-out $master-animation-time;
 
-        // -webkit-transition: height $master-animation-time ease-in-out $master-animation-time, margin $master-animation-time ease-in-out $master-animation-time, border-radius 100ms ease-in-out $master-animation-time;
-        // -moz-transition: height $master-animation-time ease-in-out $master-animation-time, margin $master-animation-time ease-in-out $master-animation-time, border-radius 100ms ease-in-out $master-animation-time;
-        // -o-transition: height $master-animation-time ease-in-out $master-animation-time, margin $master-animation-time ease-in-out $master-animation-time, border-radius 100ms ease-in-out $master-animation-time;
-        // transition: height $master-animation-time ease-in-out $master-animation-time, margin $master-animation-time ease-in-out $master-animation-time, border-radius 100ms ease-in-out $master-animation-time;
-
         .btn{
             position: relative;
             width: 50px;
@@ -198,12 +199,10 @@
             background-color:rgba(0,0,0,0.30);
             border-radius:50;
 
-
-
-
             &:hover{
                 background-color:rgb(0,0,0);
                 background-color:rgba(0,0,0,0.90);
+
                 .icon{
                     height:44%;
                 }
@@ -224,30 +223,18 @@
                 transform: translate(-50%, -50%);
                 width: 100%;
                 height: 40%;
+
                 -webkit-transition: height 100ms ease-out;
                 -moz-transition: height 100ms ease-out;
                 -o-transition: height 100ms ease-out;
                 transition: height 100ms ease-out;
             }
-            
-            // // TODO - remove 
-            // .icon use {
-            //     stroke: rgb(256,256,256);
-            //     stroke: rgba(256,256,256,0.60);
-            //     fill: rgb(256,256,256);
-            //     fill: rgba(256,256,256,0.60);
-
-            //   &:hover{
-
-            //   }
-            // }
 
             a.soclink{
                 display: block;
                 width: 100%;
                 height: 100%;
             }
-
         }
     }
 
@@ -260,10 +247,10 @@
         background-color: rgba(256,256,256,0.10);
         opacity: 1;
 
-        -webkit-transition: all 300ms ease-in-out $master-animation-time;
-        -moz-transition: all 300ms ease-in-out $master-animation-time;
-        -o-transition: all 300ms ease-in-out $master-animation-time;
-        transition: all 300ms ease-in-out $master-animation-time;
+        -webkit-transition: height 1000ms ease-in-out, opacity $master-animation-time ease-in-out $master-animation-time;
+        -moz-transition: height 1000ms ease-in-out, opacity $master-animation-time ease-in-out $master-animation-time;
+        -o-transition: height 1000ms ease-in-out, opacity $master-animation-time ease-in-out $master-animation-time;
+        transition: height 1000ms ease-in-out, opacity $master-animation-time ease-in-out $master-animation-time;
 
         p{
             opacity:1;
@@ -278,11 +265,6 @@
     &.menu-contract{
         width: $contract-amount;
         height: 100%;
-        
-        // -webkit-transition: width 1000ms ease-in-out;
-        // -moz-transition: width 1000ms ease-in-out;
-        // -o-transition: width 1000ms ease-in-out;
-        // transition: width 1000ms ease-in-out;
 
         .port{
             position: relative;
@@ -290,24 +272,19 @@
             
             .me{
                 opacity:0;
-                // display: none;
 
                 -webkit-transition: opacity $master-animation-time ease-in-out;
                 -moz-transition: opacity $master-animation-time ease-in-out;
                 -o-transition: opacity $master-animation-time ease-in-out;
                 transition: opacity $master-animation-time ease-in-out;
             }
-            // -webkit-transition: height 1000ms ease-in-out;
-            // -moz-transition: height 1000ms ease-in-out;
-            // -o-transition: height 1000ms ease-in-out;
-            // transition: height 1000ms ease-in-out;
+
         }
 
         .circle {
             top: 50%;
             height: 50px;
             width: 50px;
-
         }
 
         .nav{
@@ -322,6 +299,7 @@
                 background-color: rgba(0,0,0,0.10);
                 color: rgb(256,256,256);
                 color: rgba(256,256,256,0.60);
+
                 -webkit-transition: background-color 300ms ease-out;
                 -moz-transition: background-color 300ms ease-out;
                 -o-transition: background-color 300ms ease-out;
@@ -353,14 +331,6 @@
                         width: 30%;
                         height: 30%;
                     }
-                    // TODO - remove 
-                    .icon use {
-                        opacity:1;
-                        stroke: rgb(256,256,256);
-                        // stroke: rgba(256,256,256,0.60);
-                        fill: rgb(256,256,256);
-                        // fill: rgba(256,256,256,0.60);
-                    }
 
                     p{
                         opacity: 1;
@@ -374,7 +344,7 @@
                         transform: translate(-50%, -50%);
                         text-align: center;
                         font-size: 10%;
-                        letter-spacing: 3.75px;
+                        letter-spacing: 2.5px;
                     }
                 }
             }
@@ -382,6 +352,7 @@
 
         .social{
             height:auto;
+
             .btn{
                 width: 100%;
                 height: 6.6%;
@@ -389,6 +360,7 @@
                 margin: 0;
 
                 &:hover{
+
                     .icon{
                         height:44%;
                     }
@@ -407,13 +379,13 @@
             margin: 0 auto;
             height:0;
             background-color: transparent;
-            -webkit-transform: scale(0);
-            -moz-transform: scale(0);
-            -ms-transform: scale(0);
-            transform: scale(0);
+
             p{
                 opacity:0;
             }
         }
     }
+
+    @import "./menu-mobile";
+
 }

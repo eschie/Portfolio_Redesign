@@ -1,0 +1,27 @@
+@include breakpoint(mobile) {
+    // > section:first-child{ top: 0; left: 0; }
+    // > section:nth-child(2){ top: 25%; left: 0; }
+    // > section:nth-child(3){ top: 50%; left: 0; }
+    // > section:nth-child(4){ top: 75%; left: 0; }
+
+    section{
+        // width:100%;
+        // height:25%;
+        // top:auto;
+        // left:auto;
+        .box-panel-overlay{
+            // -webkit-overflow-scrolling: touch;
+             div.pagelink{
+                p{
+                    opacity:1;
+                    font-size:75%;
+                }
+            }
+        }
+
+        &.box-panel-expand{
+            top: 0;
+            left: 0;
+        }
+    }
+}

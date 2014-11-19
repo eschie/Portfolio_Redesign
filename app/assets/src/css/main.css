@@ -50,6 +50,12 @@ a:hover {
   font-weight: bold;
 }
 
+html, body {
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
 body {
   background-color: #cbc7e8;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIwJSIgY3k9IjAlIiByPSIxNDEuNDIxMzU2MjM3MzA5NSUiPjxzdG9wIHN0b3AtY29sb3I9IiM4YmU1ZWIiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2U5YmFmOSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNjciLz48c3RvcCBzdG9wLWNvbG9yPSIjZjFiMGIwIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMSIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==);
@@ -63,7 +69,7 @@ body {
   width: 320px;
   height: 100%;
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
@@ -108,13 +114,13 @@ body {
   transition: all 500ms ease-in-out 500ms;
 }
 .menu .port .me .where {
-  padding-top: 10px;
+  padding-top: 5px;
   text-align: center;
 }
 .menu .port .me .where .icon {
   vertical-align: middle;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 .menu .port .me .where span {
   font-size: .75em;
@@ -274,10 +280,10 @@ body {
   background-color: white;
   background-color: rgba(255, 255, 255, 0.1);
   opacity: 1;
-  -webkit-transition: all 300ms ease-in-out 500ms;
-  -moz-transition: all 300ms ease-in-out 500ms;
-  -o-transition: all 300ms ease-in-out 500ms;
-  transition: all 300ms ease-in-out 500ms;
+  -webkit-transition: height 1000ms ease-in-out, opacity 500ms ease-in-out 500ms;
+  -moz-transition: height 1000ms ease-in-out, opacity 500ms ease-in-out 500ms;
+  -o-transition: height 1000ms ease-in-out, opacity 500ms ease-in-out 500ms;
+  transition: height 1000ms ease-in-out, opacity 500ms ease-in-out 500ms;
 }
 .menu .bio p {
   opacity: 1;
@@ -347,11 +353,6 @@ body {
   width: 30%;
   height: 30%;
 }
-.menu.menu-contract .nav .btn a.navlink .icon use {
-  opacity: 1;
-  stroke: white;
-  fill: white;
-}
 .menu.menu-contract .nav .btn a.navlink p {
   opacity: 1;
   display: inline-block;
@@ -364,7 +365,7 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 10%;
-  letter-spacing: 3.75px;
+  letter-spacing: 2.5px;
 }
 .menu.menu-contract .social {
   height: auto;
@@ -388,21 +389,113 @@ body {
   margin: 0 auto;
   height: 0;
   background-color: transparent;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
 }
 .menu.menu-contract .bio p {
   opacity: 0;
+}
+@media (max-width: 570px) {
+  .menu {
+    width: 100%;
+    position: relative;
+    height: auto;
+    float: none;
+  }
+  .menu .key {
+    height: 4%;
+  }
+  .menu .port {
+    width: 100%;
+    height: 50%;
+  }
+  .menu .port .me {
+    top: 60%;
+  }
+  .menu .port .circle {
+    top: 30%;
+    left: 50%;
+    height: 110px;
+    width: 110px;
+  }
+  .menu .nav {
+    opacity: 1;
+    height: 16%;
+    width: 100%;
+  }
+  .menu .nav .btn {
+    opacity: 1;
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 25%;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    color: rgba(255, 255, 255, 0.6);
+    -webkit-transition: background-color 300ms ease-out;
+    -moz-transition: background-color 300ms ease-out;
+    -o-transition: background-color 300ms ease-out;
+    transition: background-color 300ms ease-out;
+  }
+  .menu .nav .btn.active, .menu .nav .btn:hover {
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    color: white;
+  }
+  .menu .nav .btn a.navlink {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .menu .nav .btn a.navlink .icon {
+    opacity: 1;
+    display: inline-block;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 30%;
+  }
+  .menu .nav .btn a.navlink .icon use {
+    opacity: 1;
+    stroke: white;
+    fill: white;
+  }
+  .menu .nav .btn a.navlink p {
+    opacity: 1;
+    display: inline-block;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 8px;
+    letter-spacing: 3.75px;
+  }
+  .menu .social {
+    display: none;
+    width: 16.5%;
+    height: 100%;
+    float: left;
+    margin: 0;
+  }
+  .menu .bio {
+    height: 20%;
+    padding: 5% 8%;
+  }
 }
 
 .iconfill {
   fill: white;
   fill: rgba(255, 255, 255, 0.6);
-}
-.iconfill:hover {
-  fill: white;
 }
 
 .iconstroke {
@@ -415,7 +508,8 @@ body {
   width: auto;
   height: 100%;
   position: relative;
-  overflow: auto;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
   -webkit-transition: margin-left 500ms ease-in-out;
   -moz-transition: margin-left 500ms ease-in-out;
   -o-transition: margin-left 500ms ease-in-out;
@@ -423,6 +517,13 @@ body {
 }
 .content-container.content-container-contract {
   margin-left: 110px;
+}
+@media (max-width: 570px) {
+  .content-container {
+    margin-left: 0;
+    height: 100%;
+    width: auto;
+  }
 }
 
 .box-container {
@@ -476,24 +577,34 @@ body {
   text-align: center;
   position: relative;
   opacity: 1;
+}
+.box-container section .box-panel-overlay div.pagelink {
+  display: block;
+  width: 100%;
+  height: 100%;
   -webkit-transition: background-color 300ms ease-out, opacity 500ms ease-in;
   -moz-transition: background-color 300ms ease-out, opacity 500ms ease-in;
   -o-transition: background-color 300ms ease-out, opacity 500ms ease-in;
   transition: background-color 300ms ease-out, opacity 500ms ease-in;
 }
-.box-container section .box-panel-overlay:hover {
+.box-container section .box-panel-overlay div.pagelink:active, .box-container section .box-panel-overlay div.pagelink:focus {
+  background-color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+.no-touch .box-container section .box-panel-overlay div.pagelink:hover {
   background-color: black;
   background-color: rgba(0, 0, 0, 0.2);
   font-weight: bold;
   color: white;
 }
-.box-container section .box-panel-overlay:hover .pagelink p {
+.no-touch .box-container section .box-panel-overlay div.pagelink:hover p {
   opacity: 1;
 }
-.box-container section .box-panel-overlay:hover .icon {
+.no-touch .box-container section .box-panel-overlay div.pagelink:hover .icon {
   height: 45%;
 }
-.box-container section .box-panel-overlay .icon {
+.box-container section .box-panel-overlay div.pagelink .icon {
   display: inline-block;
   position: absolute;
   top: 35%;
@@ -504,21 +615,10 @@ body {
   transform: translate(-50%, -50%);
   width: 35%;
   height: 35%;
-  -webkit-transition: height 300ms ease-in-out;
-  -moz-transition: height 300ms ease-in-out;
-  -o-transition: height 300ms ease-in-out;
-  transition: height 300ms ease-in-out;
-}
-.box-container section .box-panel-overlay .icon use {
-  stroke: white;
-  stroke: rgba(255, 255, 255, 0.6);
-  fill: white;
-  fill: rgba(255, 255, 255, 0.6);
-}
-.box-container section .box-panel-overlay div.pagelink {
-  display: block;
-  width: 100%;
-  height: 100%;
+  -webkit-transition: height 100ms ease-in-out;
+  -moz-transition: height 100ms ease-in-out;
+  -o-transition: height 100ms ease-in-out;
+  transition: height 100ms ease-in-out;
 }
 .box-container section .box-panel-overlay div.pagelink p {
   opacity: 0;
@@ -545,12 +645,14 @@ body {
   opacity: 0;
   pointer-events: none;
   position: absolute;
-  top: 15px;
-  left: 20px;
-  right: 30px;
-  bottom: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px 30px 20px 20px;
   overflow: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .box-container section .box-panel-content, .box-container section .box-panel-close {
   -webkit-transition: opacity 500ms ease-in-out;
@@ -560,15 +662,23 @@ body {
 }
 .box-container section span.box-panel-close {
   display: block;
-  font-size: 2em;
-  margin-bottom: 10px;
+  margin: 10px;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 0;
+  right: 0;
   cursor: pointer;
   z-index: 100;
   opacity: 0;
   pointer-events: none;
+  width: 55px;
+  height: 55px;
+}
+.box-container section span.box-panel-close:active, .box-container section span.box-panel-close:focus {
+  background-color: black;
+}
+.box-container section span.box-panel-close .icon {
+  width: 100%;
+  height: 100%;
 }
 .box-container section.box-panel-expand {
   width: 100%;
@@ -582,6 +692,7 @@ body {
 }
 .box-container section.box-panel-expand .box-panel-overlay {
   opacity: 0;
+  display: none;
   -webkit-transition: opacity 500ms ease-out;
   -moz-transition: opacity 500ms ease-out;
   -o-transition: opacity 500ms ease-out;
@@ -595,11 +706,21 @@ body {
   -o-transition: opacity 500ms ease-in-out 1000ms;
   transition: opacity 500ms ease-in-out 1000ms;
 }
+@media (max-width: 570px) {
+  .box-container section .box-panel-overlay div.pagelink p {
+    opacity: 1;
+    font-size: 75%;
+  }
+  .box-container section.box-panel-expand {
+    top: 0;
+    left: 0;
+  }
+}
 
 .work-container {
   position: absolute;
   left: 100px;
-  width: 65%;
+  width: 75%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 .work-container:after {
@@ -651,7 +772,6 @@ body {
   z-index: 10;
 }
 .work-container .work-content {
-  height: 100px;
   padding: 20px 0;
 }
 .work-container .education-content {
@@ -689,6 +809,19 @@ body {
   color: white;
   color: rgba(255, 255, 255, 0.7);
 }
+@media (max-width: 570px) {
+  .work-container {
+    left: 0;
+    width: auto;
+    padding: 15px 30px 20px 20px;
+  }
+  .work-container h2 {
+    font-size: 1.5em;
+  }
+  .work-container .title .employer, .work-container .title .institution {
+    display: inline-block;
+  }
+}
 
 .portfolio-container {
   position: absolute;
@@ -716,8 +849,7 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
-
-ul.portfolio-list li.portfolio-content-container {
+.portfolio-container ul.portfolio-list li.portfolio-content-container {
   display: block;
   float: left;
   height: 280px;
@@ -732,20 +864,20 @@ ul.portfolio-list li.portfolio-content-container {
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
-ul.portfolio-list li.portfolio-content-container .project-top-container {
+.portfolio-container ul.portfolio-list li.portfolio-content-container .project-top-container {
   background-color: white;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 5px;
   overflow: auto;
 }
-ul.portfolio-list li.portfolio-content-container .project-top-container .img-container {
+.portfolio-container ul.portfolio-list li.portfolio-content-container .project-top-container .img-container {
   position: relative;
   display: block;
   width: 220px;
   height: 180px;
   margin: 15px;
 }
-ul.portfolio-list li.portfolio-content-container .project-top-container .img-container a.coverlink {
+.portfolio-container ul.portfolio-list li.portfolio-content-container .project-top-container .img-container a.coverlink {
   display: block;
   position: absolute;
   top: 0;
@@ -758,10 +890,10 @@ ul.portfolio-list li.portfolio-content-container .project-top-container .img-con
   -o-transition: background-color 300ms ease-in-out;
   transition: background-color 300ms ease-in-out;
 }
-ul.portfolio-list li.portfolio-content-container .project-top-container .img-container a.coverlink:hover {
+.portfolio-container ul.portfolio-list li.portfolio-content-container .project-top-container .img-container a.coverlink:hover {
   background-color: transparent;
 }
-ul.portfolio-list li.portfolio-content-container .project-top-container .img-container .cover {
+.portfolio-container ul.portfolio-list li.portfolio-content-container .project-top-container .img-container .cover {
   position: absolute;
   top: 0;
   left: 0;
@@ -771,7 +903,7 @@ ul.portfolio-list li.portfolio-content-container .project-top-container .img-con
   border-radius: 5px;
   border: 1px solid #ddd;
 }
-ul.portfolio-list li.portfolio-content-container .project-top-container span.name {
+.portfolio-container ul.portfolio-list li.portfolio-content-container .project-top-container span.name {
   font-size: 1em;
   font-weight: bold;
   line-height: 1.5em;
@@ -781,38 +913,58 @@ ul.portfolio-list li.portfolio-content-container .project-top-container span.nam
   padding-bottom: 15px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
-ul.portfolio-list li.portfolio-content-container .project-bottom-container {
+.portfolio-container ul.portfolio-list li.portfolio-content-container .project-bottom-container {
   background-color: transparent;
   padding-left: 15px;
   color: white;
   color: rgba(255, 255, 255, 0.6);
 }
-ul.portfolio-list li.portfolio-content-container .project-bottom-container .icon {
+.portfolio-container ul.portfolio-list li.portfolio-content-container .project-bottom-container .icon {
   vertical-align: middle;
   width: 20px;
   height: 20px;
   padding: 5px 0;
 }
-ul.portfolio-list li.portfolio-content-container .project-bottom-container span {
+.portfolio-container ul.portfolio-list li.portfolio-content-container .project-bottom-container span {
   font-size: .75em;
   line-height: 1em;
   letter-spacing: 3.5px;
   text-transform: uppercase;
 }
-ul.portfolio-list li.portfolio-content-container .project-bottom-container .views, ul.portfolio-list li.portfolio-content-container .project-bottom-container .appreciations {
+.portfolio-container ul.portfolio-list li.portfolio-content-container .project-bottom-container .views, .portfolio-container ul.portfolio-list li.portfolio-content-container .project-bottom-container .appreciations {
   padding: 10px;
+}
+@media (max-width: 570px) {
+  .portfolio-container {
+    left: 0;
+    width: auto;
+    padding: 15px 30px 20px 20px;
+  }
+  .portfolio-container h2 {
+    font-size: 1.5em;
+    padding-left: 0;
+  }
+  .portfolio-container ul.portfolio-list {
+    margin: 0 auto;
+    width: auto;
+  }
+  .portfolio-container ul.portfolio-list li.portfolio-content-container {
+    float: none;
+    margin: 20px auto;
+  }
 }
 
 form {
   font-family: 'PT Sans', Arial;
-  width: 50%;
+  width: 90%;
+  height: 100%;
   padding: 30px;
   margin: 0 auto;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   background: black;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
   overflow: hidden;
   color: white;
 }
@@ -831,8 +983,8 @@ form textarea {
   height: 110px;
   border: 1px solid white;
   border: 1px solid rgba(255, 255, 255, 0.6);
-  background: white;
-  background: rgba(255, 255, 255, 0.4);
+  background: black;
+  background: rgba(255, 255, 255, 0.2);
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -864,8 +1016,8 @@ form input[type=submit] {
   cursor: pointer;
 }
 form input.name, form input.email, form input.message {
-  background: white;
-  background: rgba(255, 255, 255, 0.4);
+  background: black;
+  background: rgba(255, 255, 255, 0.2);
   padding-left: 45px;
 }
 form input:focus, form textarea:focus {

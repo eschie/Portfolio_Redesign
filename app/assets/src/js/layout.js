@@ -22,13 +22,28 @@ var layout = (function() {
 
     function initEvents() {
 
-        function toggleMenu () {
-            if ( $menu.hasClass('menu-contract') ){
+        FastClick.attach(document.body);
+
+        $(window).resize( function (){
+            console.log( $(window).width() );
+            if ( $(window).width() <= 570 && $el.hasClass('panel-expanded') ) {
                 $menu.removeClass('menu-contract');
                 $contentContainer.removeClass( 'content-container-contract');
-            } else {
+            } else if ( $(window).width() > 570 && $el.hasClass('panel-expanded') ) {
                 $menu.addClass('menu-contract');
                 $contentContainer.addClass( 'content-container-contract');
+            }
+        });
+ 
+        function toggleMenu () {
+            if ( $(document).width() > 570 ) {
+                if ( $menu.hasClass('menu-contract') ){
+                    $menu.removeClass('menu-contract');
+                    $contentContainer.removeClass( 'content-container-contract');
+                } else {
+                    $menu.addClass('menu-contract');
+                    $contentContainer.addClass( 'content-container-contract');
+                }
             }
         }
 

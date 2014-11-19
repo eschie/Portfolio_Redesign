@@ -1,17 +1,7 @@
-{{!-- <form action="" id="addTask">
-    <input type="text" placeholder="Your new task" id="">
-    <input type="submit" value="Add Task" id="">
-</form>
-<div class="task-container">
-    <script id="taskTemplate" type="text/template">
-        <span><%= title %></span> <button class="edit">Edit</button> <button class="delete">Delete</button>
-    </script>
-</div> --}}
-
 <div class="box-container">
     <section id="box-work" class="box-panel">
         <div class="box-panel-overlay">
-            <div class="pagelink" href="#">
+            <div class="pagelink">
                 <svg class='icon'>
                   <use xlink:href='#icon-Icon-Work'/>
                 </svg>
@@ -21,11 +11,15 @@
         <div class="box-panel-content">
             {{> sections/work}}
         </div>
-        <span class="box-panel-close">X</span>
+        <span class="box-panel-close">
+            <svg class="icon">
+                <use xlink:href='#icon-Icon-Close'/>
+            </svg>
+        </span>
     </section>
     <section id="box-portfolio" class="box-panel">
         <div class="box-panel-overlay">
-            <div class="pagelink" href="#">
+            <div class="pagelink">
                 <svg class='icon'>
                   <use xlink:href='#icon-Icon-Portfolio'/>
                 </svg>
@@ -35,11 +29,15 @@
         <div class="box-panel-content">
             {{> sections/portfolio}}
         </div>
-        <span class="box-panel-close">X</span>
+        <span class="box-panel-close">
+            <svg class="icon">
+                <use xlink:href='#icon-Icon-Close'/>
+            </svg>
+        </span>
     </section>
     <section id="box-projects" class="box-panel">
         <div class="box-panel-overlay">
-            <div class="pagelink" href="#">
+            <div class="pagelink">
                 <svg class='icon'>
                   <use xlink:href='#icon-Icon-Projects'/>
                 </svg>
@@ -49,11 +47,15 @@
         <div class="box-panel-content">
             {{> sections/projects}}
         </div>
-        <span class="box-panel-close">X</span>
+        <span class="box-panel-close">
+            <svg class="icon">
+                <use xlink:href='#icon-Icon-Close'/>
+            </svg>
+        </span>
     </section>
     <section id="box-contact" class="box-panel">
         <div class="box-panel-overlay">
-            <div class="pagelink" href="#">
+            <div class="pagelink">
                 <svg class='icon'>
                   <use xlink:href='#icon-Icon-Contact'/>
                 </svg>
@@ -63,6 +65,10 @@
         <div class="box-panel-content">
             {{> sections/contact}}
         </div>
-        <span class="box-panel-close">X</span>
+        <span class="box-panel-close">
+            <svg class="icon">
+                <use xlink:href='#icon-Icon-Close'/>
+            </svg>
+        </span>
     </section>
 </div>

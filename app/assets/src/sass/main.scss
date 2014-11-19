@@ -10,9 +10,27 @@ $color_riptide_approx: rgb(139, 229, 235);
 $color_mauve_approx: rgb(233, 186, 249);
 $color_shilo_approx: rgb(241, 176, 176);
 
+//animations
 $master-animation-time: 500ms;
 $extend-amount: 320px ;
 $contract-amount: 110px ;
+
+//breakpoints
+$mobile-amount: 20%;
+$break-small: 570px;
+$break-large: 1200px;
+
+@mixin breakpoint($point) {
+   @if $point == mobile {
+     @media (max-width: $break-small) { @content ; }
+  }
+}
+
+html,body{
+    height:100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
 
 body {
     background-color: $color_prelude_approx;
@@ -28,11 +46,6 @@ body {
 .iconfill{
     fill: rgb(256,256,256);
     fill: rgba(256,256,256,0.60);
-
-    &:hover{
-        fill: rgb(256,256,256);
-
-    }
 }
 .iconstroke{
     stroke: rgb(256,256,256);
@@ -44,7 +57,8 @@ body {
     width:auto;
     height:100%;
     position: relative;
-    overflow: auto;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
 
     -webkit-transition: margin-left $master-animation-time ease-in-out;
     -moz-transition: margin-left $master-animation-time ease-in-out;
@@ -53,6 +67,12 @@ body {
 
     &.content-container-contract{
         margin-left: $contract-amount;
+    }
+
+    @include breakpoint(mobile) {
+        margin-left:0;
+        height:100%;
+        width:auto;
     }
 }
 
