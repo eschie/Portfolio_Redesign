@@ -18,6 +18,8 @@ var layout = (function() {
 
     function init() {
         initEvents();
+        initMobile();
+        $('body').swipeJump();
     }
 
     function initEvents() {
@@ -88,6 +90,11 @@ var layout = (function() {
                     console.log( 'section clicked: open' );
                     if ( !e.isTrigger ){
                         openBox($section,navid,toggleMenu);
+                        // TODO REMOVE
+                        // if( $(window).width() <= 570 ){
+                        //     console.log( 'fuxtick' );
+                        //     $('body').css("overflow-y","hidden");
+                        // }
                     } else {
                         openBox($section,navid);
                     }
@@ -98,6 +105,10 @@ var layout = (function() {
                 console.log( 'section clicked: close' );
                     if ( !e.isTrigger ){
                         closeBox($section,navid,toggleMenu);
+                        // TODO REMOVE
+                        // if( $(window).width() <= 570 ){
+                        //     $('body').css("overflow-y","auto");
+                        // }
                     } else {
                         closeBox($section,navid);
                     }
@@ -122,6 +133,133 @@ var layout = (function() {
             });
         })
 
+    }
+
+    function initMobile() {
+        var defaults = {
+            easing: "easeInOutCubic",
+            animationTime: 1000,
+            swipeAmnt: 30,
+            target: $('html,body'),
+            upTarget: $('.menu'),
+            downTarget: $('.content-container')
+        };
+        
+        $.extend($.easing,{
+            easeInOutCubic: function (x, t, b, c, d) {
+                if ((t/=d/2) < 1) return c/2*t*t*t + b;
+                return c/2*((t-=2)*t*t + 2) + b;
+            }
+        });
+        
+        $.fn.swipeEvents = function(options) {
+            var settings = $.extend({}, defaults, options);
+            return this.each(function() {
+
+                var startY,
+                $this = $(this);
+
+                $this.bind('touchstart', touchstart);
+                $this.bind('touchend', touchend);
+                $this.bind('touchleave', touchend);
+
+                function touchstart(event) {
+                    if ( !$('.box-container').hasClass('panel-expanded') ) {
+                        event.preventDefault();
+                        var touches = event.originalEvent.touches;
+                        console.log( "\n\n===== TOUCH START ====" );
+                        if (touches && touches.length) {
+                            startY = touches[0].pageY;
+                            console.log( "== STARTING Y POSITION == ");
+                            console.log( startY );
+                            $this.bind('touchmove', touchmove);
+                        }
+                    }
+                }
+
+                function touchend(event) {
+                    console.log( "===== TOUCH END ====" );
+                        $this.unbind('touchmove', touchmove);
+                }
+
+                function touchmove(event) {
+                    console.log( "===== TOUCH MOVE ====" );
+                    var touches = event.originalEvent.touches;
+                    if (touches && touches.length) {
+                        var deltaY = startY - touches[0].pageY;
+                        console.log( "== DIFFERENCE ==" );
+                        console.log( deltaY );
+
+                        if (deltaY >= settings.swipeAmnt) {
+                            console.log( "==== TRIGGERED ====" );
+                            $this.unbind('touchmove', touchmove);
+                            setTimeout( function () {
+                                $this.trigger("swipeUp");
+                                console.log( "===== UNBINDING ====" );
+                            },250);
+                        }
+                        if (deltaY <= -settings.swipeAmnt) {
+                            console.log( "==== TRIGGERED ====" );
+                            $this.unbind('touchmove', touchmove);
+                            setTimeout( function () {
+                                $this.trigger("swipeDown");
+                                console.log( "===== UNBINDING ====" );
+                            },250);
+                        }
+                        // if (Math.abs(deltaY) >= settings.swipeAmnt) {
+                        //     console.log( "===== UNBINDING ====" );
+                            
+                        // }
+                    }
+                }
+
+            });
+        };
+        
+        $.fn.swipeJump = function(options) {
+            var settings = $.extend({}, defaults, options),
+                el = $(this);
+            
+            $.fn.moveDown = function() {
+                console.log( "===== MOVE DOWN START ====" );
+                $('.menu').slideUp(settings.animationTime, settings.easing, function(){
+                    console.log( "===== MOVE DOWN FINISHED ====" );
+                }).animate({opacity:0},{queue:false,duration:settings.animationTime});
+            }
+            $.fn.moveUp = function() {
+                console.log( "===== MOVE UP START ====" );
+                $('.menu').slideDown(settings.animationTime, settings.easing, function(){
+                    console.log( "===== MOVE UP FINISHED ====" );
+                }).animate({opacity:1},{queue:false,duration:settings.animationTime});
+            }
+                
+            el.swipeEvents()
+                .bind("swipeDown", function(event){
+                    if (!$("body").hasClass("disabled-onepage-scroll")) {
+                        event.preventDefault();
+                        el.moveUp();
+                    }
+                })
+                .bind("swipeUp", function(event){
+                    if (!$("body").hasClass("disabled-onepage-scroll")) {
+                        event.preventDefault();
+                        el.moveDown();
+                    }
+                });
+
+            if( $(window).width() <= 570 ){
+                $('span.box-panel-close, .active').on("click", function (){
+                    $('body').moveUp();
+                });
+                // if ( $el.hasClass('panel-expanded') ) {
+                //     console.log( $el );
+                //     $('body').css("overflow-x","hidden");
+                // } else{
+                //     $('body').css("overflow-x","auto");
+                // }
+            }
+            return false;
+        }
     }
 
     return { init: init };

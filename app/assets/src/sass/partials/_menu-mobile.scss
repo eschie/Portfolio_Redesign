@@ -1,7 +1,7 @@
 @include breakpoint(mobile) {
     width: 100%;
     position: relative;
-    height: auto;
+    height: 100%;
     float: none;
 
     .key{
@@ -12,17 +12,24 @@
         height:50%;
         .me{
             top:60%;
+            p,.where > span{
+                font-size:100%;
+            }
         }
         .circle{
             top:30%;
             left:50%;
             height:110px;
+            height:30vw;
             width:110px;
+            width:30vw;
         }
     }
     .nav{
-        opacity: 1;
-        height:16%;
+        position: absolute;
+        bottom: 0;
+        opacity: 0;
+        height:0;
         width:100%;
 
         .btn{
@@ -40,7 +47,7 @@
             -o-transition: background-color 300ms ease-out;
             transition: background-color 300ms ease-out;
 
-            &.active,&:hover{
+            &.active, .no-touch &:hover{
                 background-color: rgb(0,0,0);
                 background-color: rgba(0,0,0,0.30);
                 font-weight: bold;
@@ -93,14 +100,23 @@
         }
     }
     .social{
-        display:none;
-        width:16.5%;
-        height:100%;
-        float:left;
-        margin:0;
+        // display:none;
+        width:90%;
+        margin: 0 5%;
+        .btn{
+            width: 12vw;
+            height: 12vw;
+            /* padding-bottom: 16%; */
+            margin: 2vw 5vw;
+        }
     }
     .bio{
-        height: 20%;
-        padding:5% 8%;
+        width: 90%;
+        margin: 3%;
+        height:auto;
+
+        p{
+            padding:5% 8%;
+        }
     }
 }

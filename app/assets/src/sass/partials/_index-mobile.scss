@@ -18,6 +18,12 @@
                 }
             }
         }
+        
+        &.box-contact{
+            .box-panel-content{
+                padding:0;
+            }
+        }
 
         &.box-panel-expand{
             top: 0;

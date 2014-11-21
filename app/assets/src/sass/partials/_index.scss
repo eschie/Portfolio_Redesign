@@ -58,12 +58,12 @@
                 height: 100%;
                 
                 // Transition: overlay background on hover && overlay opacity on contract
-                -webkit-transition: background-color 300ms ease-out, opacity $master-animation-time ease-in;
-                -moz-transition: background-color 300ms ease-out, opacity $master-animation-time ease-in;
-                -o-transition: background-color 300ms ease-out, opacity $master-animation-time ease-in;
-                transition: background-color 300ms ease-out, opacity $master-animation-time ease-in;
+                -webkit-transition: background-color 300ms ease-in-out, opacity $master-animation-time ease-in-out;
+                -moz-transition: background-color 300ms ease-in-out, opacity $master-animation-time ease-in-out;
+                -o-transition: background-color 300ms ease-in-out, opacity $master-animation-time ease-in-out;
+                transition: background-color 300ms ease-in-out, opacity $master-animation-time ease-in-out;
 
-                &:active,&:focus{
+                &:focus{
                     background-color: rgb(0,0,0);
                     background-color: rgba(256,256,256,0.80);
                     color:rgb(0,0,0);

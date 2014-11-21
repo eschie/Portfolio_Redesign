@@ -80,7 +80,7 @@ form {
         overflow: hidden; 
     }
 
-    .subbtn {
+    input[type="submit"] {
         width: 80%;
         height: 44px;
         border: none;
@@ -110,5 +110,5 @@ form {
             text-shadow: #333333 0 -1px 0;
        }
     }
+    @import "./contact-mobile";
 }
-
