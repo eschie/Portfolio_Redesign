@@ -1,7 +1,6 @@
 @include breakpoint(mobile) {
     left:0;
-    width:auto;
-    padding: 15px 30px 20px 20px;
+    width:100%;
 
     h2{
         font-size:1.5em;

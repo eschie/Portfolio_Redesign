@@ -247,6 +247,20 @@ var layout = (function() {
                         el.moveDown();
                     }
                 });
+
+            // TODO REMOVE
+            // if( $(window).width() <= 570 ){
+            //     $('span.box-panel-close, .active').on("click", function (){
+            //         $('body').moveUp();
+            //     });
+
+            //     if ( $el.hasClass('panel-expanded') ) {
+            //         console.log( $el );
+            //         $('body').css("overflow-x","hidden");
+            //     } else{
+            //         $('body').css("overflow-x","auto");
+            //     }
+            // }
             return false;
         }
     }

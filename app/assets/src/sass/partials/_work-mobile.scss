@@ -3,6 +3,11 @@
     width:auto;
     padding: 15px 30px 20px 20px;
 
+
+    &:after,h2:before,h3:before{
+        display:none;
+    }
+
     h2{
         font-size:1.5em;
     }
