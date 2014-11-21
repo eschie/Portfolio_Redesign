@@ -206,6 +206,7 @@ var layout = (function() {
                                 console.log( "===== UNBINDING ====" );
                             },250);
                         }
+                        // TODO REMOVE
                         // if (Math.abs(deltaY) >= settings.swipeAmnt) {
                         //     console.log( "===== UNBINDING ====" );
                             
@@ -246,18 +247,6 @@ var layout = (function() {
                         el.moveDown();
                     }
                 });
-
-            if( $(window).width() <= 570 ){
-                $('span.box-panel-close, .active').on("click", function (){
-                    $('body').moveUp();
-                });
-                // if ( $el.hasClass('panel-expanded') ) {
-                //     console.log( $el );
-                //     $('body').css("overflow-x","hidden");
-                // } else{
-                //     $('body').css("overflow-x","auto");
-                // }
-            }
             return false;
         }
     }

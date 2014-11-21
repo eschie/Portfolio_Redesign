@@ -30,7 +30,7 @@
         li.portfolio-content-container{
             display: block;
             float:left;
-            height: 280px;
+            height: auto;
             width: 250px;
             margin: 20px;
             border-radius: 5px;
@@ -109,6 +109,14 @@
                     width: 20px;
                     height: 20px;
                     margin:5px 0;
+                }
+
+                .description{
+                    opacity:1;
+                    height: auto;
+                    p{
+                        padding: 10px;
+                    }
                 }
 
                 span{

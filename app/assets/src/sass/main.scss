@@ -21,7 +21,7 @@ $break-small: 570px;
 
 @mixin breakpoint($point) {
    @if $point == mobile {
-     @media screen and (max-width: $break-small) and (min-width: 320px) { @content ; }
+     @media screen and (max-width: $break-small) { @content ; }
   }
 }
 
@@ -74,7 +74,7 @@ body {
         width:auto;
         box-sizing:border-box;
         border-top:15px solid rgb(0,0,0);
-        border-top:15px solid rgba(0,0,0,0.30);
+        border-top:15px solid rgba(0,0,0,0.60);
     }
 }
 

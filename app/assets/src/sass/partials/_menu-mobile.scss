@@ -13,16 +13,14 @@
         .me{
             top:60%;
             p,.where > span{
-                font-size:100%;
+                font-size:14px;
             }
         }
         .circle{
             top:30%;
             left:50%;
-            height:110px;
-            height:30vw;
-            width:110px;
-            width:30vw;
+            height:90px;
+            width:90px;
         }
     }
     .nav{
@@ -112,11 +110,11 @@
     }
     .bio{
         width: 90%;
-        margin: 3%;
+        margin: 5%;
         height:auto;
 
         p{
-            padding:5% 8%;
+            padding:4% 8%;
         }
     }
 }

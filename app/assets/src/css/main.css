@@ -399,7 +399,7 @@ body {
 .menu.menu-contract .bio p {
   opacity: 0;
 }
-@media screen and (max-width: 570px) and (min-width: 320px) {
+@media screen and (max-width: 570px) {
   .menu {
     width: 100%;
     position: relative;
@@ -417,15 +417,13 @@ body {
     top: 60%;
   }
   .menu .port .me p, .menu .port .me .where > span {
-    font-size: 100%;
+    font-size: 14px;
   }
   .menu .port .circle {
     top: 30%;
     left: 50%;
-    height: 110px;
-    height: 30vw;
-    width: 110px;
-    width: 30vw;
+    height: 90px;
+    width: 90px;
   }
   .menu .nav {
     position: absolute;
@@ -505,11 +503,11 @@ body {
   }
   .menu .bio {
     width: 90%;
-    margin: 3%;
+    margin: 5%;
     height: auto;
   }
   .menu .bio p {
-    padding: 5% 8%;
+    padding: 4% 8%;
   }
 }
 
@@ -538,14 +536,14 @@ body {
 .content-container.content-container-contract {
   margin-left: 110px;
 }
-@media screen and (max-width: 570px) and (min-width: 320px) {
+@media screen and (max-width: 570px) {
   .content-container {
     margin-left: 0;
     height: 100%;
     width: auto;
     box-sizing: border-box;
     border-top: 15px solid black;
-    border-top: 15px solid rgba(0, 0, 0, 0.3);
+    border-top: 15px solid rgba(0, 0, 0, 0.6);
   }
 }
 
@@ -729,10 +727,16 @@ body {
   -o-transition: opacity 500ms ease-in-out 1000ms;
   transition: opacity 500ms ease-in-out 1000ms;
 }
-@media screen and (max-width: 570px) and (min-width: 320px) {
+@media screen and (max-width: 570px) {
   .box-container section .box-panel-overlay div.pagelink p {
     opacity: 1;
     font-size: 75%;
+  }
+  .box-container section .box-panel-content {
+    text-align: center;
+  }
+  .box-container section .box-panel-content:after, .box-container section .box-panel-content h2:before, .box-container section .box-panel-content h3:before {
+    display: none;
   }
   .box-container section.box-contact .box-panel-content {
     padding: 0;
@@ -740,6 +744,8 @@ body {
   .box-container section.box-panel-expand {
     top: 0;
     left: 0;
+    border-top: 15px solid black;
+    border-top: 15px solid rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -835,7 +841,7 @@ body {
   color: white;
   color: rgba(255, 255, 255, 0.7);
 }
-@media screen and (max-width: 570px) and (min-width: 320px) {
+@media screen and (max-width: 570px) {
   .work-container {
     left: 0;
     width: auto;
@@ -878,7 +884,7 @@ body {
 .portfolio-container ul.portfolio-list li.portfolio-content-container {
   display: block;
   float: left;
-  height: 280px;
+  height: auto;
   width: 250px;
   margin: 20px;
   border-radius: 5px;
@@ -951,6 +957,13 @@ body {
   height: 20px;
   margin: 5px 0;
 }
+.portfolio-container ul.portfolio-list li.portfolio-content-container .project-bottom-container .description {
+  opacity: 1;
+  height: auto;
+}
+.portfolio-container ul.portfolio-list li.portfolio-content-container .project-bottom-container .description p {
+  padding: 10px;
+}
 .portfolio-container ul.portfolio-list li.portfolio-content-container .project-bottom-container span {
   font-size: .75em;
   line-height: 1em;
@@ -960,7 +973,7 @@ body {
 .portfolio-container ul.portfolio-list li.portfolio-content-container .project-bottom-container .views, .portfolio-container ul.portfolio-list li.portfolio-content-container .project-bottom-container .appreciations {
   padding: 10px;
 }
-@media screen and (max-width: 570px) and (min-width: 320px) {
+@media screen and (max-width: 570px) {
   .portfolio-container {
     left: 0;
     width: auto;
@@ -1083,7 +1096,7 @@ form input[type="submit"]:active {
   background-color: white;
   text-shadow: #333333 0 -1px 0;
 }
-@media screen and (max-width: 570px) and (min-width: 320px) {
+@media screen and (max-width: 570px) {
   form {
     padding: 0;
     margin: 0;

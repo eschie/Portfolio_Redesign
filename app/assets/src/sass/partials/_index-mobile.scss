@@ -18,7 +18,16 @@
                 }
             }
         }
-        
+
+        .box-panel-content{
+         text-align: center;
+            
+            &:after,h2:before,h3:before{
+                display:none;
+            }
+
+        }
+
         &.box-contact{
             .box-panel-content{
                 padding:0;
@@ -28,6 +37,8 @@
         &.box-panel-expand{
             top: 0;
             left: 0;
+            border-top:15px solid rgb(0,0,0);
+            border-top:15px solid rgba(0,0,0,0.30);
         }
     }
 }
