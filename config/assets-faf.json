@@ -1,16 +1,12 @@
 {
   "main": {
     "vendorJs": {
-        "dest": "app/assets/dist/js/min/lib.min.js",
+        "dest": "app/assets/dist/js/lib.js",
         "src": [
             "bower_components/jquery/dist/jquery.min.js",
-            "bower_components/angular/angular.min.js",
-            "bower_components/angular-mocks/angular-mocks.js",
-            "bower_components/angular-cookies/angular-cookies.min.js",
-            "bower_components/angular-resource/angular-resource.min.js",
-            "bower_components/angular-ui-router/release/angular-ui-router.min.js",
             "bower_components/modernizr/modernizr.js",
-            "bower_components/handlebars.runtime.js"
+            "bower_components/jquery-waypoints/waypoints.min.js",
+            "bower_components/fastclick/lib/fastclick.js"
         ]
     },
     "publicCss": {
@@ -18,7 +14,7 @@
         "src": "app/assets/src/css/main.css"
     },
     "publicJs": {
-      "dest": "app/assets/dist/js/min/client.min.js",
+      "dest": "app/assets/dist/js/app.js",
       "src": [
         "app/assets/src/js/**/*.js"
       ]

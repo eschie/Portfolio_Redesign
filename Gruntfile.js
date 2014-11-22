@@ -68,13 +68,6 @@ module.exports = function(grunt) {
                 livereload: true
               }
             },
-            handlebars: {
-              files: ['views/*.hbs','views/**/*.hbs'],
-              tasks: ['clean:js'],
-              options: {
-                livereload: true
-              }
-            },
             sass: {
                 files: ['app/assets/src/sass/main.scss', 'app/assets/src/sass/partials/*.scss'],
                 tasks: ['clean:css','sass','cssmin']
@@ -156,12 +149,13 @@ module.exports = function(grunt) {
         // },
         concat: {
             options: {
-                separator: ';'
+                separator: ';\n'
             },
             production: {
                 files: [
                     // '<%= assets.main.vendorCss %>',
                     '<%= assets.main.vendorJs %>',
+                    '<%= assets.main.publicJs %>'
                 ]
             }
         },
@@ -176,7 +170,12 @@ module.exports = function(grunt) {
             options: {
               mangle: false
             },
-            files: ['<%= assets.main.publicJs %>']
+            build: {
+                files:{
+                    '<%= project.dist %>/js/min/lib.min.js': ['<%= project.dist %>/js/lib.js'],
+                    '<%= project.dist %>/js/min/app.min.js': ['<%= project.dist %>/js/app.js']
+                }
+            }
         },
         nodemon: {
           dev: {
@@ -217,10 +216,10 @@ module.exports = function(grunt) {
             'clean',
             'svgstore:icons',
             'svginjector:icons',
-            // 'handlebars:compile',
             'sass', 
             'autoprefixer',
             'cssmin', 
+            'concat:production',
             'uglify', 
             'concurrent'
         ]);
@@ -230,11 +229,12 @@ module.exports = function(grunt) {
             'clean',
             'svgstore:icons',
             'svginjector:icons',
-            // 'handlebars:compile',
             'sass', 
             'autoprefixer',
             'csslint', 
             'cssmin',
+            'concat:production',
+            'uglify',
             'concurrent'
         ]);
     }

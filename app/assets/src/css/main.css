@@ -66,6 +66,7 @@ body {
   position: relative;
   background-color: #cbc7e8;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIwJSIgY3k9IjAlIiByPSIxNDEuNDIxMzU2MjM3MzA5NSUiPjxzdG9wIHN0b3AtY29sb3I9IiM4YmU1ZWIiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2U5YmFmOSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNjciLz48c3RvcCBzdG9wLWNvbG9yPSIjZjFiMGIwIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMSIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==);
+  background-image: -webkit-repeating-radial-gradient(ellipse farthest-corner at left top, #8be5eb 0, #e9baf9 67%, #f1b0b0 100%);
   background-image: repeating-radial-gradient(ellipse farthest-corner at left top, #8be5eb 0, #e9baf9 67%, #f1b0b0 100%);
   font-family: "PT Sans", "Arial";
   font-size: 1em;
@@ -81,8 +82,6 @@ body {
   top: 0;
   left: 0;
   -webkit-transition: width 500ms ease-in-out;
-  -moz-transition: width 500ms ease-in-out;
-  -o-transition: width 500ms ease-in-out;
   transition: width 500ms ease-in-out;
 }
 .menu .key {
@@ -104,8 +103,6 @@ body {
   width: 100%;
   height: 340px;
   -webkit-transition: height 500ms ease-in-out;
-  -moz-transition: height 500ms ease-in-out;
-  -o-transition: height 500ms ease-in-out;
   transition: height 500ms ease-in-out;
 }
 .menu .port .me {
@@ -116,8 +113,6 @@ body {
   display: block;
   margin: 0 auto;
   -webkit-transition: all 500ms ease-in-out 500ms;
-  -moz-transition: all 500ms ease-in-out 500ms;
-  -o-transition: all 500ms ease-in-out 500ms;
   transition: all 500ms ease-in-out 500ms;
 }
 .menu .port .me .where {
@@ -152,15 +147,12 @@ body {
   top: 35%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   height: 180px;
   width: 180px;
   margin: 0 auto;
   -webkit-transition: width 500ms ease-in-out, height 500ms ease-in-out, top 500ms ease-in-out;
-  -moz-transition: width 500ms ease-in-out, height 500ms ease-in-out, top 500ms ease-in-out;
-  -o-transition: width 500ms ease-in-out, height 500ms ease-in-out, top 500ms ease-in-out;
   transition: width 500ms ease-in-out, height 500ms ease-in-out, top 500ms ease-in-out;
 }
 .menu .circle:before, .menu .circle:after {
@@ -172,14 +164,10 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: -o-linear-gradient(-44deg, #FFFFFF 0%, #FFFFFF 0%, #E8E8E8 0%, #ECECEC 29%, #BABABA 77%, #737373 100%);
-  background-image: -moz-linear-gradient(-44deg, #FFFFFF 0%, #FFFFFF 0%, #E8E8E8 0%, #ECECEC 29%, #BABABA 77%, #737373 100%);
-  background-image: -ms-linear-gradient(-44deg, #FFFFFF 0%, #FFFFFF 0%, #E8E8E8 0%, #ECECEC 29%, #BABABA 77%, #737373 100%);
+  background-image: -webkit-linear-gradient(224deg, #FFFFFF 0%, #FFFFFF 0%, #E8E8E8 0%, #ECECEC 29%, #BABABA 77%, #737373 100%);
   background-image: linear-gradient(-134deg, #FFFFFF 0%, #FFFFFF 0%, #E8E8E8 0%, #ECECEC 29%, #BABABA 77%, #737373 100%);
-  -moz-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.6);
-  -webkit-border-radius: 100;
-  border-radius: 100;
+  border-radius: 100%;
   z-index: 1;
 }
 .menu .circle:after {
@@ -202,16 +190,13 @@ body {
   bottom: 3%;
   max-width: 94%;
   position: absolute;
-  -webkit-border-radius: 100;
-  border-radius: 100;
+  border-radius: 100%;
 }
 .menu .nav {
   height: 0;
   opacity: 0;
   width: 100%;
   -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
 .menu .nav .btn {
@@ -234,8 +219,6 @@ body {
   height: 120px;
   margin: 0 auto;
   -webkit-transition: all 500ms ease-in-out 500ms;
-  -moz-transition: all 500ms ease-in-out 500ms;
-  -o-transition: all 500ms ease-in-out 500ms;
   transition: all 500ms ease-in-out 500ms;
 }
 .menu .social .btn {
@@ -246,7 +229,7 @@ body {
   margin: 5px 7px;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 50;
+  border-radius: 50%;
 }
 .menu .social .btn:hover {
   background-color: black;
@@ -264,14 +247,11 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 100%;
   height: 40%;
   -webkit-transition: height 100ms ease-out;
-  -moz-transition: height 100ms ease-out;
-  -o-transition: height 100ms ease-out;
   transition: height 100ms ease-out;
 }
 .menu .social .btn a.soclink {
@@ -287,8 +267,6 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   opacity: 1;
   -webkit-transition: height 1000ms ease-in-out, opacity 500ms ease-in-out 500ms;
-  -moz-transition: height 1000ms ease-in-out, opacity 500ms ease-in-out 500ms;
-  -o-transition: height 1000ms ease-in-out, opacity 500ms ease-in-out 500ms;
   transition: height 1000ms ease-in-out, opacity 500ms ease-in-out 500ms;
 }
 .menu .bio p {
@@ -309,8 +287,6 @@ body {
 .menu.menu-contract .port .me {
   opacity: 0;
   -webkit-transition: opacity 500ms ease-in-out;
-  -moz-transition: opacity 500ms ease-in-out;
-  -o-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
 }
 .menu.menu-contract .circle {
@@ -331,8 +307,6 @@ body {
   color: white;
   color: rgba(255, 255, 255, 0.6);
   -webkit-transition: background-color 300ms ease-out;
-  -moz-transition: background-color 300ms ease-out;
-  -o-transition: background-color 300ms ease-out;
   transition: background-color 300ms ease-out;
 }
 .menu.menu-contract .nav .btn.active, .menu.menu-contract .nav .btn:hover {
@@ -354,7 +328,6 @@ body {
   top: 35%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 30%;
@@ -367,7 +340,6 @@ body {
   top: 65%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
@@ -375,7 +347,7 @@ body {
   letter-spacing: 2.5px;
 }
 .menu.menu-contract .social {
-  height: auto;
+  height: 100%;
 }
 .menu.menu-contract .social .btn {
   width: 100%;
@@ -444,8 +416,6 @@ body {
     color: white;
     color: rgba(255, 255, 255, 0.6);
     -webkit-transition: background-color 300ms ease-out;
-    -moz-transition: background-color 300ms ease-out;
-    -o-transition: background-color 300ms ease-out;
     transition: background-color 300ms ease-out;
   }
   .menu .nav .btn.active, .no-touch .menu .nav .btn:hover {
@@ -467,7 +437,6 @@ body {
     top: 35%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 30%;
@@ -485,7 +454,6 @@ body {
     top: 65%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
@@ -530,8 +498,6 @@ body {
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
   -webkit-transition: margin-left 500ms ease-in-out;
-  -moz-transition: margin-left 500ms ease-in-out;
-  -o-transition: margin-left 500ms ease-in-out;
   transition: margin-left 500ms ease-in-out;
 }
 .content-container.content-container-contract {
@@ -585,8 +551,6 @@ body {
   border: 1px solid white;
   border: 1px solid rgba(255, 255, 255, 0);
   -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
 .box-container section.box-panel-expand-top {
@@ -605,8 +569,6 @@ body {
   width: 100%;
   height: 100%;
   -webkit-transition: background-color 300ms ease-in-out, opacity 500ms ease-in-out;
-  -moz-transition: background-color 300ms ease-in-out, opacity 500ms ease-in-out;
-  -o-transition: background-color 300ms ease-in-out, opacity 500ms ease-in-out;
   transition: background-color 300ms ease-in-out, opacity 500ms ease-in-out;
 }
 .box-container section .box-panel-overlay div.pagelink:focus {
@@ -632,14 +594,11 @@ body {
   top: 35%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 35%;
   height: 35%;
   -webkit-transition: height 100ms ease-in-out;
-  -moz-transition: height 100ms ease-in-out;
-  -o-transition: height 100ms ease-in-out;
   transition: height 100ms ease-in-out;
 }
 .box-container section .box-panel-overlay div.pagelink p {
@@ -649,18 +608,15 @@ body {
   top: 75%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 150%;
+  font-size: 100%;
   letter-spacing: .75em;
   font-weight: bold;
   color: white;
   color: rgba(255, 255, 255, 0.6);
   -webkit-transition: opacity 300ms linear;
-  -moz-transition: opacity 300ms linear;
-  -o-transition: opacity 300ms linear;
   transition: opacity 300ms linear;
 }
 .box-container section .box-panel-content {
@@ -678,8 +634,6 @@ body {
 }
 .box-container section .box-panel-content, .box-container section .box-panel-close {
   -webkit-transition: opacity 500ms ease-in-out;
-  -moz-transition: opacity 500ms ease-in-out;
-  -o-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
 }
 .box-container section span.box-panel-close {
@@ -716,16 +670,12 @@ body {
   opacity: 0;
   display: none;
   -webkit-transition: opacity 500ms ease-out;
-  -moz-transition: opacity 500ms ease-out;
-  -o-transition: opacity 500ms ease-out;
   transition: opacity 500ms ease-out;
 }
 .box-container section.box-panel-expand .box-panel-content, .box-container section.box-panel-expand .box-panel-close {
   pointer-events: auto;
   opacity: 1;
   -webkit-transition: opacity 500ms ease-in-out 1000ms;
-  -moz-transition: opacity 500ms ease-in-out 1000ms;
-  -o-transition: opacity 500ms ease-in-out 1000ms;
   transition: opacity 500ms ease-in-out 1000ms;
 }
 @media screen and (max-width: 570px) {
@@ -922,8 +872,6 @@ body {
   width: 100%;
   height: 100%;
   -webkit-transition: background-color 300ms ease-in-out;
-  -moz-transition: background-color 300ms ease-in-out;
-  -o-transition: background-color 300ms ease-in-out;
   transition: background-color 300ms ease-in-out;
 }
 .portfolio-container ul.portfolio-list li.portfolio-content-container .project-top-container .img-container a.coverlink:hover {
@@ -1002,8 +950,6 @@ form {
   height: 100%;
   padding: 30px;
   margin: 0 auto;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   background: black;
   background: rgba(0, 0, 0, 0.3);
@@ -1027,8 +973,6 @@ form textarea {
   border: 1px solid rgba(255, 255, 255, 0.6);
   background: black;
   background: rgba(255, 255, 255, 0.2);
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
   border-radius: 4px;
   display: block;
   font-size: 18px;
@@ -1045,8 +989,6 @@ form input {
   height: 48px;
   border: 1px solid white;
   border: 1px solid rgba(255, 255, 255, 0.4);
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
   border-radius: 4px;
   display: block;
   font-size: 18px;
@@ -1065,8 +1007,6 @@ form input.name, form input.email, form input.message {
 form input:focus, form textarea:focus {
   background-color: black;
   background-color: rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5);
-  -webkit-box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 5px 1px white;
   box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5);
   overflow: hidden;
@@ -1076,8 +1016,6 @@ form input[type="submit"] {
   height: 44px;
   border: none;
   margin: 0 auto;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.1);
@@ -1109,5 +1047,3 @@ form input[type="submit"]:active {
     border-radius: 0;
   }
 }
-
-/*# sourceMappingURL=main.css.map */

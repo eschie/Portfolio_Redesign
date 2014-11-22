@@ -34,6 +34,7 @@ app.use(bodyParser.json());
 
 // TODO - set proper static folders
 app.use('/app/assets/dist', express.static(__dirname + '/app/assets/dist'));
+app.use('/app/assets/dist/js/min', express.static(__dirname + '/app/assets/dist/js/min'));
 app.use('/app/assets/src', express.static(__dirname + '/app/assets/src'));
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
